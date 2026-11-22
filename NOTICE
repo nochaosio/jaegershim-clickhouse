@@ -1,0 +1,12 @@
+ClickHouse Jaeger
+Copyright 2026 NOCHAOS
+
+This product includes software developed by third parties:
+
+- Jaeger UI (https://github.com/jaegertracing/jaeger-ui), Copyright The Jaeger Authors,
+  licensed under the Apache License 2.0. The official release assets are downloaded at
+  image build time and served unmodified (only the version string is injected).
+- clickhouse-go (https://github.com/ClickHouse/clickhouse-go), Apache License 2.0.
+
+"Jaeger" is a trademark of The Linux Foundation. This project is not affiliated with or
+endorsed by the Jaeger project, ClickHouse, Inc. or Grafana Labs.

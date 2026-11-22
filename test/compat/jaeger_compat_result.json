@@ -1,0 +1,503 @@
+{
+  "run": "cmp1795360547",
+  "results": [
+    {
+      "section": "A-grafana",
+      "name": "health jaeger-original",
+      "ok": true,
+      "detail": "Data source is working"
+    },
+    {
+      "section": "A-grafana",
+      "name": "health clickhouse-jaeger",
+      "ok": true,
+      "detail": "Data source is working"
+    },
+    {
+      "section": "A-grafana",
+      "name": "dropdown de serviços (serviços de teste)",
+      "ok": true,
+      "detail": "ours=['checkout', 'frontend', 'payments', 'postgres'] ref=['checkout', 'frontend', 'payments', 'postgres']"
+    },
+    {
+      "section": "A-grafana",
+      "name": "dropdown de operações: checkout",
+      "ok": true,
+      "detail": "ours=['POST /pay', 'checkout.process'] ref=['POST /pay', 'checkout.process']"
+    },
+    {
+      "section": "A-grafana",
+      "name": "dropdown de operações: frontend",
+      "ok": true,
+      "detail": "ours=['GET /checkout'] ref=['GET /checkout']"
+    },
+    {
+      "section": "A-grafana",
+      "name": "dropdown de operações: payments",
+      "ok": true,
+      "detail": "ours=['POST /pay'] ref=['POST /pay']"
+    },
+    {
+      "section": "A-grafana",
+      "name": "dropdown de operações: postgres",
+      "ok": true,
+      "detail": "ours=['SELECT payments'] ref=['SELECT payments']"
+    },
+    {
+      "section": "A-grafana",
+      "name": "busca: service=frontend",
+      "ok": true,
+      "detail": "30 traces"
+    },
+    {
+      "section": "A-grafana",
+      "name": "busca: service=payments + error=true",
+      "ok": true,
+      "detail": "6 traces"
+    },
+    {
+      "section": "A-grafana",
+      "name": "busca: minDuration=1s",
+      "ok": true,
+      "detail": "8 traces"
+    },
+    {
+      "section": "A-grafana",
+      "name": "busca: maxDuration=500ms",
+      "ok": true,
+      "detail": "22 traces"
+    },
+    {
+      "section": "A-grafana",
+      "name": "busca: min+maxDuration (100ms..1.8s)",
+      "ok": true,
+      "detail": "20 traces"
+    },
+    {
+      "section": "A-grafana",
+      "name": "busca: operation='POST /pay' (checkout)",
+      "ok": true,
+      "detail": "30 traces"
+    },
+    {
+      "section": "A-grafana",
+      "name": "busca: span.kind=client",
+      "ok": true,
+      "detail": "30 traces"
+    },
+    {
+      "section": "A-grafana",
+      "name": "busca: tag de resource cloud.region",
+      "ok": true,
+      "detail": "15 traces"
+    },
+    {
+      "section": "A-grafana",
+      "name": "busca: atributo int http.response.status_code=402",
+      "ok": true,
+      "detail": "6 traces"
+    },
+    {
+      "section": "A-grafana",
+      "name": "busca: campo de evento exception.type",
+      "ok": true,
+      "detail": "6 traces"
+    },
+    {
+      "section": "A-grafana",
+      "name": "busca: multi-tag mesmo span (user.tier+error)",
+      "ok": true,
+      "detail": "2 traces"
+    },
+    {
+      "section": "A-grafana",
+      "name": "busca: otel.status_code=ERROR (Jaeger não indexa: 0)",
+      "ok": true,
+      "detail": "0 traces"
+    },
+    {
+      "section": "A-grafana",
+      "name": "busca: error=false",
+      "ok": true,
+      "detail": "24 traces"
+    },
+    {
+      "section": "A-grafana",
+      "name": "busca: tags em spans diferentes (não casa)",
+      "ok": true,
+      "detail": "0 traces"
+    },
+    {
+      "section": "A-grafana",
+      "name": "busca: sem resultado",
+      "ok": true,
+      "detail": "0 traces"
+    },
+    {
+      "section": "A-grafana",
+      "name": "busca: limit=5",
+      "ok": true,
+      "detail": "ours=5 ref=5"
+    },
+    {
+      "section": "A-grafana",
+      "name": "trace por ID (cascata) — 30 traces",
+      "ok": true,
+      "detail": "30/30 idênticos"
+    },
+    {
+      "section": "A-grafana",
+      "name": "grafo de dependências (arestas entre serviços de teste)",
+      "ok": true,
+      "detail": "ours=[('checkout', 'checkout'), ('checkout', 'payments'), ('frontend', 'checkout'), ('payments', 'postgres')] ref=[('checkout', 'checkout'), ('checkout', 'payments'), ('frontend', 'checkout'), ('payments', 'postgres')]"
+    },
+    {
+      "section": "B-legacy",
+      "name": "/api/services",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "section": "B-legacy",
+      "name": "/api/operations?service=checkout",
+      "ok": true,
+      "detail": "ours=[('POST /pay', 'client'), ('checkout.process', 'internal')] ref=[('POST /pay', 'client'), ('checkout.process', 'internal')]"
+    },
+    {
+      "section": "B-legacy",
+      "name": "/api/operations?service=frontend",
+      "ok": true,
+      "detail": "ours=[('GET /checkout', 'server')] ref=[('GET /checkout', 'server')]"
+    },
+    {
+      "section": "B-legacy",
+      "name": "/api/operations?service=payments",
+      "ok": true,
+      "detail": "ours=[('POST /pay', 'server')] ref=[('POST /pay', 'server')]"
+    },
+    {
+      "section": "B-legacy",
+      "name": "/api/operations?service=postgres",
+      "ok": true,
+      "detail": "ours=[('SELECT payments', 'client')] ref=[('SELECT payments', 'client')]"
+    },
+    {
+      "section": "B-legacy",
+      "name": "/api/operations spanKind=client",
+      "ok": true,
+      "detail": "ours=[('POST /pay', 'client')] ref=[('POST /pay', 'client')]"
+    },
+    {
+      "section": "B-legacy",
+      "name": "/api/operations spanKind=internal",
+      "ok": true,
+      "detail": "ours=[('checkout.process', 'internal')] ref=[('checkout.process', 'internal')]"
+    },
+    {
+      "section": "B-legacy",
+      "name": "/api/operations spanKind=server",
+      "ok": true,
+      "detail": "ours=[] ref=[]"
+    },
+    {
+      "section": "B-legacy",
+      "name": "/api/traces service=frontend",
+      "ok": true,
+      "detail": "30 traces completos idênticos"
+    },
+    {
+      "section": "B-legacy",
+      "name": "/api/traces service=payments + error=true",
+      "ok": true,
+      "detail": "6 traces completos idênticos"
+    },
+    {
+      "section": "B-legacy",
+      "name": "/api/traces minDuration=1s",
+      "ok": true,
+      "detail": "8 traces completos idênticos"
+    },
+    {
+      "section": "B-legacy",
+      "name": "/api/traces maxDuration=500ms",
+      "ok": true,
+      "detail": "22 traces completos idênticos"
+    },
+    {
+      "section": "B-legacy",
+      "name": "/api/traces min+maxDuration (100ms..1.8s)",
+      "ok": true,
+      "detail": "20 traces completos idênticos"
+    },
+    {
+      "section": "B-legacy",
+      "name": "/api/traces operation='POST /pay' (checkout)",
+      "ok": true,
+      "detail": "30 traces completos idênticos"
+    },
+    {
+      "section": "B-legacy",
+      "name": "/api/traces span.kind=client",
+      "ok": true,
+      "detail": "30 traces completos idênticos"
+    },
+    {
+      "section": "B-legacy",
+      "name": "/api/traces tag de resource cloud.region",
+      "ok": true,
+      "detail": "15 traces completos idênticos"
+    },
+    {
+      "section": "B-legacy",
+      "name": "/api/traces atributo int http.response.status_code=402",
+      "ok": true,
+      "detail": "6 traces completos idênticos"
+    },
+    {
+      "section": "B-legacy",
+      "name": "/api/traces campo de evento exception.type",
+      "ok": true,
+      "detail": "6 traces completos idênticos"
+    },
+    {
+      "section": "B-legacy",
+      "name": "/api/traces multi-tag mesmo span (user.tier+error)",
+      "ok": true,
+      "detail": "2 traces completos idênticos"
+    },
+    {
+      "section": "B-legacy",
+      "name": "/api/traces otel.status_code=ERROR (Jaeger não indexa: 0)",
+      "ok": true,
+      "detail": "0 traces completos idênticos"
+    },
+    {
+      "section": "B-legacy",
+      "name": "/api/traces error=false",
+      "ok": true,
+      "detail": "24 traces completos idênticos"
+    },
+    {
+      "section": "B-legacy",
+      "name": "/api/traces tags em spans diferentes (não casa)",
+      "ok": true,
+      "detail": "0 traces completos idênticos"
+    },
+    {
+      "section": "B-legacy",
+      "name": "/api/traces sem resultado",
+      "ok": true,
+      "detail": "0 traces completos idênticos"
+    },
+    {
+      "section": "B-legacy",
+      "name": "/api/traces/{id} (modelo completo: tags, logs, refs, processes)",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "section": "B-legacy",
+      "name": "/api/traces?traceID=a&traceID=b",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "section": "B-legacy",
+      "name": "erro /api/traces/zzz ",
+      "ok": true,
+      "detail": "ours=400 'invalid length for TraceID' ref=400 'invalid length for TraceID'"
+    },
+    {
+      "section": "B-legacy",
+      "name": "erro /api/traces/00000000000000000000000000000001 ",
+      "ok": true,
+      "detail": "ours=404 'trace not found' ref=404 'trace not found'"
+    },
+    {
+      "section": "B-legacy",
+      "name": "erro /api/traces ",
+      "ok": true,
+      "detail": "ours=400 \"parameter 'service' is required\" ref=400 \"parameter 'service' is required\""
+    },
+    {
+      "section": "B-legacy",
+      "name": "erro /api/traces {'service': 'x', 'minDuration': 'abc'}",
+      "ok": true,
+      "detail": "ours=400 'unable to parse param \\'minDuration\\': time: invalid duration \"abc\"' ref=400 'unable to parse param \\'minDuration\\': time: invalid duration \"abc\"'"
+    },
+    {
+      "section": "B-legacy",
+      "name": "/api/dependencies (arestas + contagem, serviços de teste)",
+      "ok": true,
+      "detail": "ours={('checkout', 'checkout'): 58, ('checkout', 'payments'): 58, ('frontend', 'checkout'): 58, ('payments', 'postgres'): 58} ref={('frontend', 'checkout'): 58, ('checkout', 'checkout'): 58, ('payments', 'postgres'): 58, ('checkout', 'payments'): 58}"
+    },
+    {
+      "section": "C-v3",
+      "name": "/api/v3/services",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "section": "C-v3",
+      "name": "/api/v3/operations?service=checkout",
+      "ok": true,
+      "detail": "ours=[('POST /pay', 'client'), ('checkout.process', 'internal')] ref=[('POST /pay', 'client'), ('checkout.process', 'internal')]"
+    },
+    {
+      "section": "C-v3",
+      "name": "/api/v3/operations?service=frontend",
+      "ok": true,
+      "detail": "ours=[('GET /checkout', 'server')] ref=[('GET /checkout', 'server')]"
+    },
+    {
+      "section": "C-v3",
+      "name": "/api/v3/operations?service=payments",
+      "ok": true,
+      "detail": "ours=[('POST /pay', 'server')] ref=[('POST /pay', 'server')]"
+    },
+    {
+      "section": "C-v3",
+      "name": "/api/v3/operations?service=postgres",
+      "ok": true,
+      "detail": "ours=[('SELECT payments', 'client')] ref=[('SELECT payments', 'client')]"
+    },
+    {
+      "section": "C-v3",
+      "name": "trace-summaries service=frontend",
+      "ok": true,
+      "detail": "30 resumos idênticos"
+    },
+    {
+      "section": "C-v3",
+      "name": "trace-summaries service=payments + error=true",
+      "ok": true,
+      "detail": "6 resumos idênticos"
+    },
+    {
+      "section": "C-v3",
+      "name": "trace-summaries minDuration=1s",
+      "ok": true,
+      "detail": "8 resumos idênticos"
+    },
+    {
+      "section": "C-v3",
+      "name": "trace-summaries maxDuration=500ms",
+      "ok": true,
+      "detail": "22 resumos idênticos"
+    },
+    {
+      "section": "C-v3",
+      "name": "trace-summaries min+maxDuration (100ms..1.8s)",
+      "ok": true,
+      "detail": "20 resumos idênticos"
+    },
+    {
+      "section": "C-v3",
+      "name": "trace-summaries operation='POST /pay' (checkout)",
+      "ok": true,
+      "detail": "30 resumos idênticos"
+    },
+    {
+      "section": "C-v3",
+      "name": "trace-summaries span.kind=client",
+      "ok": true,
+      "detail": "30 resumos idênticos"
+    },
+    {
+      "section": "C-v3",
+      "name": "trace-summaries tag de resource cloud.region",
+      "ok": true,
+      "detail": "15 resumos idênticos"
+    },
+    {
+      "section": "C-v3",
+      "name": "trace-summaries atributo int http.response.status_code=402",
+      "ok": true,
+      "detail": "6 resumos idênticos"
+    },
+    {
+      "section": "C-v3",
+      "name": "trace-summaries campo de evento exception.type",
+      "ok": true,
+      "detail": "6 resumos idênticos"
+    },
+    {
+      "section": "C-v3",
+      "name": "trace-summaries multi-tag mesmo span (user.tier+error)",
+      "ok": true,
+      "detail": "2 resumos idênticos"
+    },
+    {
+      "section": "C-v3",
+      "name": "trace-summaries otel.status_code=ERROR (Jaeger não indexa: 0)",
+      "ok": true,
+      "detail": "0 resumos idênticos"
+    },
+    {
+      "section": "C-v3",
+      "name": "trace-summaries error=false",
+      "ok": true,
+      "detail": "24 resumos idênticos"
+    },
+    {
+      "section": "C-v3",
+      "name": "trace-summaries tags em spans diferentes (não casa)",
+      "ok": true,
+      "detail": "0 resumos idênticos"
+    },
+    {
+      "section": "C-v3",
+      "name": "trace-summaries sem resultado",
+      "ok": true,
+      "detail": "0 resumos idênticos"
+    },
+    {
+      "section": "C-v3",
+      "name": "/api/v3/traces/{id} OTLP — 30 traces",
+      "ok": true,
+      "detail": "30/30 idênticos"
+    },
+    {
+      "section": "C-v3",
+      "name": "/api/v3/traces (busca, OTLP)",
+      "ok": true,
+      "detail": "30 spans"
+    },
+    {
+      "section": "C-v3",
+      "name": "erro /api/v3/traces/00000000000000000000000000000001",
+      "ok": true,
+      "detail": "ours=404 {'error': {'httpCode': 404, 'message': 'No traces found'}} ref=404 {'error': {'httpCode': 404, 'message': 'No traces found'}}"
+    },
+    {
+      "section": "C-v3",
+      "name": "erro /api/v3/trace-summaries",
+      "ok": true,
+      "detail": "ours=400 {'error': {'httpCode': 400, 'message': 'invalid query: min and max start time are required'}} ref=400 {'error': {'httpCode': 400, 'message': 'invalid query: min and max start time are required'}}"
+    },
+    {
+      "section": "D-ui",
+      "name": "GET /search devolve o Jaeger UI (SPA)",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "section": "D-ui",
+      "name": "assets do UI (10 arquivos)",
+      "ok": true,
+      "detail": "[200, 200, 200, 200, 200, 200, 200, 200, 200, 200]"
+    },
+    {
+      "section": "D-ui",
+      "name": "deep link /trace/{id}",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "section": "D-ui",
+      "name": "busca no formato do UI (trace-summaries)",
+      "ok": true,
+      "detail": "20 resumos"
+    }
+  ]
+}

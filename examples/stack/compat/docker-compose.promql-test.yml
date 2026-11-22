@@ -1,0 +1,36 @@
+# Uso (em examples/stack): docker compose -f docker-compose.yml -f compat/docker-compose.promql-test.yml up -d
+services:
+  otel-collector:
+    volumes:
+      - ./compat/otel-collector-promql-test.yaml:/etc/otelcol-contrib/config.yaml:ro
+
+  prometheus:
+    image: prom/prometheus:v3.16.0
+    container_name: prometheus-reference
+    command:
+      - --config.file=/etc/prometheus/prometheus.yml
+      - --web.enable-remote-write-receiver
+      - --enable-feature=promql-experimental-functions
+      - --storage.tsdb.retention.time=2d
+    volumes:
+      - ./compat/prometheus.yml:/etc/prometheus/prometheus.yml:ro
+      - prom_ref_data:/prometheus
+    ports:
+      - "9090:9090"
+
+  avalanche:
+    image: quay.io/prometheuscommunity/avalanche:v0.7.0
+    container_name: avalanche
+    command:
+      - --gauge-metric-count=50
+      - --counter-metric-count=50
+      - --histogram-metric-count=5
+      - --series-count=20
+      - --label-count=5
+      - --value-interval=15
+      - --series-interval=0
+      - --metric-interval=0
+      - --port=9001
+
+volumes:
+  prom_ref_data:

@@ -1,0 +1,23 @@
+<clickhouse>
+    <!-- API compatível com Prometheus (remote write/read + PromQL query API) na porta HTTP 8123 -->
+    <http_handlers>
+        <defaults/>
+        <rule>
+            <url_prefix>/prometheus/api/v1</url_prefix>
+            <handler>
+                <type>prometheus_api_v1</type>
+                <database>prometheus</database>
+                <table>metrics</table>
+            </handler>
+        </rule>
+    </http_handlers>
+
+    <!-- Métricas internas do próprio ClickHouse para scrape -->
+    <prometheus>
+        <endpoint>/metrics</endpoint>
+        <port>9363</port>
+        <metrics>true</metrics>
+        <events>true</events>
+        <asynchronous_metrics>true</asynchronous_metrics>
+    </prometheus>
+</clickhouse>

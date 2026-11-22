@@ -1,0 +1,893 @@
+[
+  {
+    "name": "selector",
+    "query": "avalanche_gauge_metric_mmmmm_0_0",
+    "instant": "OK",
+    "range": "OK",
+    "detail": "20 séries",
+    "ch_ms": 132,
+    "prom_ms": 19
+  },
+  {
+    "name": "matcher_eq",
+    "query": "avalanche_gauge_metric_mmmmm_0_0{series_id=\"3\"}",
+    "instant": "OK",
+    "range": "OK",
+    "detail": "1 séries",
+    "ch_ms": 15,
+    "prom_ms": 3
+  },
+  {
+    "name": "matcher_neq",
+    "query": "avalanche_gauge_metric_mmmmm_0_0{series_id!=\"3\"}",
+    "instant": "OK",
+    "range": "OK",
+    "detail": "19 séries",
+    "ch_ms": 11,
+    "prom_ms": 1
+  },
+  {
+    "name": "matcher_re",
+    "query": "avalanche_gauge_metric_mmmmm_0_0{series_id=~\"1.*\"}",
+    "instant": "OK",
+    "range": "OK",
+    "detail": "11 séries",
+    "ch_ms": 13,
+    "prom_ms": 2
+  },
+  {
+    "name": "matcher_nre",
+    "query": "avalanche_gauge_metric_mmmmm_0_0{series_id!~\"1.*\"}",
+    "instant": "OK",
+    "range": "OK",
+    "detail": "9 séries",
+    "ch_ms": 11,
+    "prom_ms": 2
+  },
+  {
+    "name": "name_regex",
+    "query": "{__name__=~\"avalanche_gauge_metric_mmmmm_0_[0-2]\", series_id=\"0\"}",
+    "instant": "OK",
+    "range": "OK",
+    "detail": "3 séries",
+    "ch_ms": 11,
+    "prom_ms": 1
+  },
+  {
+    "name": "offset",
+    "query": "avalanche_gauge_metric_mmmmm_0_0{series_id=\"1\"} offset 2m",
+    "instant": "OK",
+    "range": "OK",
+    "detail": "1 séries",
+    "ch_ms": 17,
+    "prom_ms": 4
+  },
+  {
+    "name": "at_modifier",
+    "query": "avalanche_gauge_metric_mmmmm_0_0{series_id=\"1\"} @ end()",
+    "instant": "OK",
+    "range": "OK",
+    "detail": "1 séries",
+    "ch_ms": 13,
+    "prom_ms": 1
+  },
+  {
+    "name": "rate",
+    "query": "rate(avalanche_counter_metric_mmmmm_0_0_total[2m])",
+    "instant": "OK",
+    "range": "OK",
+    "detail": "20 séries",
+    "ch_ms": 24,
+    "prom_ms": 2
+  },
+  {
+    "name": "irate",
+    "query": "irate(avalanche_counter_metric_mmmmm_0_0_total[2m])",
+    "instant": "OK",
+    "range": "OK",
+    "detail": "20 séries",
+    "ch_ms": 14,
+    "prom_ms": 1
+  },
+  {
+    "name": "increase",
+    "query": "increase(avalanche_counter_metric_mmmmm_0_0_total[3m])",
+    "instant": "OK",
+    "range": "OK",
+    "detail": "20 séries",
+    "ch_ms": 12,
+    "prom_ms": 1
+  },
+  {
+    "name": "delta",
+    "query": "delta(avalanche_gauge_metric_mmmmm_0_0[3m])",
+    "instant": "OK",
+    "range": "OK",
+    "detail": "20 séries",
+    "ch_ms": 12,
+    "prom_ms": 3
+  },
+  {
+    "name": "idelta",
+    "query": "idelta(avalanche_gauge_metric_mmmmm_0_0[3m])",
+    "instant": "OK",
+    "range": "OK",
+    "detail": "20 séries",
+    "ch_ms": 10,
+    "prom_ms": 2
+  },
+  {
+    "name": "deriv",
+    "query": "deriv(avalanche_gauge_metric_mmmmm_0_0[3m])",
+    "instant": "OK",
+    "range": "OK",
+    "detail": "20 séries",
+    "ch_ms": 10,
+    "prom_ms": 1
+  },
+  {
+    "name": "resets",
+    "query": "resets(avalanche_counter_metric_mmmmm_0_0_total[5m])",
+    "instant": "OK",
+    "range": "OK",
+    "detail": "20 séries",
+    "ch_ms": 11,
+    "prom_ms": 1
+  },
+  {
+    "name": "changes",
+    "query": "changes(avalanche_gauge_metric_mmmmm_0_0[5m])",
+    "instant": "OK",
+    "range": "OK",
+    "detail": "20 séries",
+    "ch_ms": 10,
+    "prom_ms": 1
+  },
+  {
+    "name": "avg_over_time",
+    "query": "avg_over_time(avalanche_gauge_metric_mmmmm_0_0[3m])",
+    "instant": "OK",
+    "range": "OK",
+    "detail": "20 séries",
+    "ch_ms": 10,
+    "prom_ms": 2
+  },
+  {
+    "name": "min_over_time",
+    "query": "min_over_time(avalanche_gauge_metric_mmmmm_0_0[3m])",
+    "instant": "OK",
+    "range": "OK",
+    "detail": "20 séries",
+    "ch_ms": 10,
+    "prom_ms": 1
+  },
+  {
+    "name": "max_over_time",
+    "query": "max_over_time(avalanche_gauge_metric_mmmmm_0_0[3m])",
+    "instant": "OK",
+    "range": "OK",
+    "detail": "20 séries",
+    "ch_ms": 10,
+    "prom_ms": 2
+  },
+  {
+    "name": "sum_over_time",
+    "query": "sum_over_time(avalanche_gauge_metric_mmmmm_0_0[3m])",
+    "instant": "OK",
+    "range": "OK",
+    "detail": "20 séries",
+    "ch_ms": 10,
+    "prom_ms": 1
+  },
+  {
+    "name": "count_over_time",
+    "query": "count_over_time(avalanche_gauge_metric_mmmmm_0_0[3m])",
+    "instant": "OK",
+    "range": "OK",
+    "detail": "20 séries",
+    "ch_ms": 10,
+    "prom_ms": 1
+  },
+  {
+    "name": "last_over_time",
+    "query": "last_over_time(avalanche_gauge_metric_mmmmm_0_0[3m])",
+    "instant": "OK",
+    "range": "OK",
+    "detail": "20 séries",
+    "ch_ms": 9,
+    "prom_ms": 2
+  },
+  {
+    "name": "present_over_time",
+    "query": "present_over_time(avalanche_gauge_metric_mmmmm_0_0[3m])",
+    "instant": "OK",
+    "range": "OK",
+    "detail": "20 séries",
+    "ch_ms": 11,
+    "prom_ms": 1
+  },
+  {
+    "name": "stddev_over_time",
+    "query": "stddev_over_time(avalanche_gauge_metric_mmmmm_0_0[3m])",
+    "instant": "OK",
+    "range": "OK",
+    "detail": "20 séries",
+    "ch_ms": 13,
+    "prom_ms": 2
+  },
+  {
+    "name": "stdvar_over_time",
+    "query": "stdvar_over_time(avalanche_gauge_metric_mmmmm_0_0[3m])",
+    "instant": "OK",
+    "range": "OK",
+    "detail": "20 séries",
+    "ch_ms": 10,
+    "prom_ms": 1
+  },
+  {
+    "name": "quantile_over_time",
+    "query": "quantile_over_time(0.9, avalanche_gauge_metric_mmmmm_0_0[3m])",
+    "instant": "OK",
+    "range": "OK",
+    "detail": "20 séries",
+    "ch_ms": 10,
+    "prom_ms": 1
+  },
+  {
+    "name": "mad_over_time",
+    "query": "mad_over_time(avalanche_gauge_metric_mmmmm_0_0[3m])",
+    "instant": "OK",
+    "range": "OK",
+    "detail": "20 séries",
+    "ch_ms": 10,
+    "prom_ms": 2
+  },
+  {
+    "name": "predict_linear",
+    "query": "predict_linear(avalanche_gauge_metric_mmmmm_0_0[3m], 600)",
+    "instant": "OK",
+    "range": "OK",
+    "detail": "20 séries",
+    "ch_ms": 11,
+    "prom_ms": 2
+  },
+  {
+    "name": "double_exp_smoothing",
+    "query": "double_exponential_smoothing(avalanche_gauge_metric_mmmmm_0_0[3m], 0.5, 0.5)",
+    "instant": "CH_ERROR",
+    "range": "CH_ERROR",
+    "detail": "Function double_exponential_smoothing is not implemented",
+    "ch_ms": 3,
+    "prom_ms": 1
+  },
+  {
+    "name": "absent_over_time",
+    "query": "absent_over_time(nao_existe[3m])",
+    "instant": "OK",
+    "range": "OK",
+    "detail": "1 séries",
+    "ch_ms": 14,
+    "prom_ms": 2
+  },
+  {
+    "name": "sum",
+    "query": "sum(rate(avalanche_counter_metric_mmmmm_0_0_total[2m]))",
+    "instant": "OK",
+    "range": "OK",
+    "detail": "1 séries",
+    "ch_ms": 20,
+    "prom_ms": 2
+  },
+  {
+    "name": "sum_by",
+    "query": "sum by (label_key_kkkkk_0) (rate(avalanche_counter_metric_mmmmm_0_0_total[2m]))",
+    "instant": "OK",
+    "range": "OK",
+    "detail": "1 séries",
+    "ch_ms": 11,
+    "prom_ms": 2
+  },
+  {
+    "name": "sum_without",
+    "query": "sum without (series_id) (rate(avalanche_counter_metric_mmmmm_0_0_total[2m]))",
+    "instant": "OK",
+    "range": "OK",
+    "detail": "1 séries",
+    "ch_ms": 11,
+    "prom_ms": 1
+  },
+  {
+    "name": "avg",
+    "query": "avg(avalanche_gauge_metric_mmmmm_0_0)",
+    "instant": "OK",
+    "range": "OK",
+    "detail": "1 séries",
+    "ch_ms": 10,
+    "prom_ms": 1
+  },
+  {
+    "name": "min",
+    "query": "min(avalanche_gauge_metric_mmmmm_0_0)",
+    "instant": "OK",
+    "range": "OK",
+    "detail": "1 séries",
+    "ch_ms": 9,
+    "prom_ms": 1
+  },
+  {
+    "name": "max",
+    "query": "max(avalanche_gauge_metric_mmmmm_0_0)",
+    "instant": "OK",
+    "range": "OK",
+    "detail": "1 séries",
+    "ch_ms": 9,
+    "prom_ms": 1
+  },
+  {
+    "name": "count",
+    "query": "count(avalanche_gauge_metric_mmmmm_0_0)",
+    "instant": "OK",
+    "range": "OK",
+    "detail": "1 séries",
+    "ch_ms": 9,
+    "prom_ms": 1
+  },
+  {
+    "name": "group",
+    "query": "group by (job) (avalanche_gauge_metric_mmmmm_0_0)",
+    "instant": "OK",
+    "range": "OK",
+    "detail": "1 séries",
+    "ch_ms": 10,
+    "prom_ms": 2
+  },
+  {
+    "name": "stddev",
+    "query": "stddev(avalanche_gauge_metric_mmmmm_0_0)",
+    "instant": "OK",
+    "range": "OK",
+    "detail": "1 séries",
+    "ch_ms": 13,
+    "prom_ms": 2
+  },
+  {
+    "name": "stdvar",
+    "query": "stdvar(avalanche_gauge_metric_mmmmm_0_0)",
+    "instant": "OK",
+    "range": "OK",
+    "detail": "1 séries",
+    "ch_ms": 13,
+    "prom_ms": 1
+  },
+  {
+    "name": "topk",
+    "query": "topk(3, avalanche_gauge_metric_mmmmm_0_0)",
+    "instant": "OK",
+    "range": "DIFF",
+    "detail": "2 valores diferentes de 59; nº pontos ch=3 prom=2",
+    "ch_ms": 14,
+    "prom_ms": 1
+  },
+  {
+    "name": "bottomk",
+    "query": "bottomk(3, avalanche_gauge_metric_mmmmm_0_0)",
+    "instant": "OK",
+    "range": "OK",
+    "detail": "3 séries",
+    "ch_ms": 11,
+    "prom_ms": 1
+  },
+  {
+    "name": "quantile",
+    "query": "quantile(0.95, avalanche_gauge_metric_mmmmm_0_0)",
+    "instant": "OK",
+    "range": "OK",
+    "detail": "1 séries",
+    "ch_ms": 11,
+    "prom_ms": 2
+  },
+  {
+    "name": "count_values",
+    "query": "count_values(\"v\", round(avalanche_gauge_metric_mmmmm_0_0))",
+    "instant": "OK",
+    "range": "OK",
+    "detail": "20 séries",
+    "ch_ms": 13,
+    "prom_ms": 1
+  },
+  {
+    "name": "limitk",
+    "query": "limitk(2, avalanche_gauge_metric_mmmmm_0_0)",
+    "instant": "DIFF",
+    "range": "DIFF",
+    "detail": "séries: ch=2 prom=2 (só ch=2, só prom=2) ex={'label_key_kkkkk_3': 'label_val_vvvvv_3', 'label_key_kkkkk_1': 'label_val_vvvvv_1', 'cycle_id': '0', 'job': 'avalanche', '__name__': 'avalanche_gauge_metric_mmmmm_0_0', 'label_key_kkkkk_2': 'label_val_vvvvv_2', 'instance': 'avalanche:9001', 'series_id': '7', 'label_key_kkkkk_4': 'label_val_vvvvv_4', 'label_key_kkkkk_0': 'label_val_vvvvv_0'}",
+    "ch_ms": 11,
+    "prom_ms": 1
+  },
+  {
+    "name": "limit_ratio",
+    "query": "limit_ratio(0.5, avalanche_gauge_metric_mmmmm_0_0)",
+    "instant": "CH_ERROR",
+    "range": "CH_ERROR",
+    "detail": "Aggregation operator 'limit_ratio' is not implemented",
+    "ch_ms": 1,
+    "prom_ms": 1
+  },
+  {
+    "name": "histogram_quantile",
+    "query": "histogram_quantile(0.95, sum by (le) (rate(avalanche_histogram_metric_mmmmm_0_0_bucket[3m])))",
+    "instant": "OK",
+    "range": "OK",
+    "detail": "1 séries",
+    "ch_ms": 14,
+    "prom_ms": 2
+  },
+  {
+    "name": "histogram_quantile_by",
+    "query": "histogram_quantile(0.5, sum by (le, series_id) (rate(avalanche_histogram_metric_mmmmm_0_0_bucket[3m])))",
+    "instant": "OK",
+    "range": "OK",
+    "detail": "20 séries",
+    "ch_ms": 12,
+    "prom_ms": 2
+  },
+  {
+    "name": "histogram_avg_classic",
+    "query": "sum(rate(avalanche_histogram_metric_mmmmm_0_0_sum[3m])) / sum(rate(avalanche_histogram_metric_mmmmm_0_0_count[3m]))",
+    "instant": "OK",
+    "range": "OK",
+    "detail": "1 séries",
+    "ch_ms": 22,
+    "prom_ms": 1
+  },
+  {
+    "name": "histogram_fraction",
+    "query": "histogram_fraction(0, 0.5, sum by (le) (rate(avalanche_histogram_metric_mmmmm_0_0_bucket[3m])))",
+    "instant": "CH_ERROR",
+    "range": "CH_ERROR",
+    "detail": "Function histogram_fraction is not implemented",
+    "ch_ms": 2,
+    "prom_ms": 1
+  },
+  {
+    "name": "arith_scalar",
+    "query": "avalanche_gauge_metric_mmmmm_0_0 * 2 + 1",
+    "instant": "OK",
+    "range": "OK",
+    "detail": "20 séries",
+    "ch_ms": 13,
+    "prom_ms": 2
+  },
+  {
+    "name": "arith_vectors",
+    "query": "avalanche_gauge_metric_mmmmm_0_0 - avalanche_gauge_metric_mmmmm_0_0",
+    "instant": "OK",
+    "range": "OK",
+    "detail": "20 séries",
+    "ch_ms": 21,
+    "prom_ms": 2
+  },
+  {
+    "name": "comparison_filter",
+    "query": "avalanche_gauge_metric_mmmmm_0_0 > 50",
+    "instant": "OK",
+    "range": "OK",
+    "detail": "9 séries",
+    "ch_ms": 11,
+    "prom_ms": 1
+  },
+  {
+    "name": "comparison_bool",
+    "query": "avalanche_gauge_metric_mmmmm_0_0 > bool 50",
+    "instant": "OK",
+    "range": "OK",
+    "detail": "20 séries",
+    "ch_ms": 11,
+    "prom_ms": 3
+  },
+  {
+    "name": "and",
+    "query": "avalanche_gauge_metric_mmmmm_0_0 and avalanche_gauge_metric_mmmmm_0_0{series_id=\"2\"}",
+    "instant": "OK",
+    "range": "OK",
+    "detail": "1 séries",
+    "ch_ms": 25,
+    "prom_ms": 2
+  },
+  {
+    "name": "or",
+    "query": "avalanche_gauge_metric_mmmmm_0_0{series_id=\"1\"} or avalanche_gauge_metric_mmmmm_0_0{series_id=\"2\"}",
+    "instant": "OK",
+    "range": "OK",
+    "detail": "2 séries",
+    "ch_ms": 27,
+    "prom_ms": 1
+  },
+  {
+    "name": "unless",
+    "query": "avalanche_gauge_metric_mmmmm_0_0 unless avalanche_gauge_metric_mmmmm_0_0{series_id=\"2\"}",
+    "instant": "OK",
+    "range": "OK",
+    "detail": "19 séries",
+    "ch_ms": 24,
+    "prom_ms": 2
+  },
+  {
+    "name": "on",
+    "query": "avalanche_gauge_metric_mmmmm_0_0 / on(series_id, instance, job) avalanche_gauge_metric_mmmmm_0_0",
+    "instant": "OK",
+    "range": "OK",
+    "detail": "20 séries",
+    "ch_ms": 18,
+    "prom_ms": 1
+  },
+  {
+    "name": "ignoring",
+    "query": "avalanche_gauge_metric_mmmmm_0_0 / ignoring(label_key_kkkkk_0) avalanche_gauge_metric_mmmmm_0_0",
+    "instant": "OK",
+    "range": "OK",
+    "detail": "20 séries",
+    "ch_ms": 19,
+    "prom_ms": 2
+  },
+  {
+    "name": "group_left",
+    "query": "avalanche_gauge_metric_mmmmm_0_0 * on(job) group_left() count by (job) (avalanche_gauge_metric_mmmmm_0_0)",
+    "instant": "OK",
+    "range": "OK",
+    "detail": "20 séries",
+    "ch_ms": 22,
+    "prom_ms": 2
+  },
+  {
+    "name": "pow_mod",
+    "query": "(avalanche_gauge_metric_mmmmm_0_0 % 7) ^ 2",
+    "instant": "OK",
+    "range": "OK",
+    "detail": "20 séries",
+    "ch_ms": 11,
+    "prom_ms": 2
+  },
+  {
+    "name": "atan2",
+    "query": "avalanche_gauge_metric_mmmmm_0_0 atan2 avalanche_gauge_metric_mmmmm_0_0",
+    "instant": "OK",
+    "range": "OK",
+    "detail": "20 séries",
+    "ch_ms": 19,
+    "prom_ms": 1
+  },
+  {
+    "name": "abs",
+    "query": "abs(-avalanche_gauge_metric_mmmmm_0_0)",
+    "instant": "OK",
+    "range": "OK",
+    "detail": "20 séries",
+    "ch_ms": 15,
+    "prom_ms": 1
+  },
+  {
+    "name": "ceil",
+    "query": "ceil(avalanche_gauge_metric_mmmmm_0_0)",
+    "instant": "OK",
+    "range": "OK",
+    "detail": "20 séries",
+    "ch_ms": 12,
+    "prom_ms": 2
+  },
+  {
+    "name": "floor",
+    "query": "floor(avalanche_gauge_metric_mmmmm_0_0)",
+    "instant": "OK",
+    "range": "OK",
+    "detail": "20 séries",
+    "ch_ms": 13,
+    "prom_ms": 2
+  },
+  {
+    "name": "round",
+    "query": "round(avalanche_gauge_metric_mmmmm_0_0, 5)",
+    "instant": "OK",
+    "range": "OK",
+    "detail": "20 séries",
+    "ch_ms": 19,
+    "prom_ms": 1
+  },
+  {
+    "name": "sqrt",
+    "query": "sqrt(avalanche_gauge_metric_mmmmm_0_0)",
+    "instant": "OK",
+    "range": "OK",
+    "detail": "20 séries",
+    "ch_ms": 13,
+    "prom_ms": 1
+  },
+  {
+    "name": "exp",
+    "query": "exp(avalanche_gauge_metric_mmmmm_0_0 / 1000)",
+    "instant": "OK",
+    "range": "OK",
+    "detail": "20 séries",
+    "ch_ms": 12,
+    "prom_ms": 1
+  },
+  {
+    "name": "ln",
+    "query": "ln(avalanche_gauge_metric_mmmmm_0_0 + 1)",
+    "instant": "OK",
+    "range": "OK",
+    "detail": "20 séries",
+    "ch_ms": 15,
+    "prom_ms": 2
+  },
+  {
+    "name": "log2",
+    "query": "log2(avalanche_gauge_metric_mmmmm_0_0 + 1)",
+    "instant": "OK",
+    "range": "OK",
+    "detail": "20 séries",
+    "ch_ms": 12,
+    "prom_ms": 1
+  },
+  {
+    "name": "log10",
+    "query": "log10(avalanche_gauge_metric_mmmmm_0_0 + 1)",
+    "instant": "OK",
+    "range": "OK",
+    "detail": "20 séries",
+    "ch_ms": 11,
+    "prom_ms": 1
+  },
+  {
+    "name": "clamp",
+    "query": "clamp(avalanche_gauge_metric_mmmmm_0_0, 10, 50)",
+    "instant": "OK",
+    "range": "OK",
+    "detail": "20 séries",
+    "ch_ms": 12,
+    "prom_ms": 1
+  },
+  {
+    "name": "clamp_min",
+    "query": "clamp_min(avalanche_gauge_metric_mmmmm_0_0, 30)",
+    "instant": "OK",
+    "range": "OK",
+    "detail": "20 séries",
+    "ch_ms": 16,
+    "prom_ms": 1
+  },
+  {
+    "name": "clamp_max",
+    "query": "clamp_max(avalanche_gauge_metric_mmmmm_0_0, 30)",
+    "instant": "OK",
+    "range": "OK",
+    "detail": "20 séries",
+    "ch_ms": 12,
+    "prom_ms": 2
+  },
+  {
+    "name": "sgn",
+    "query": "sgn(avalanche_gauge_metric_mmmmm_0_0 - 50)",
+    "instant": "OK",
+    "range": "OK",
+    "detail": "20 séries",
+    "ch_ms": 12,
+    "prom_ms": 1
+  },
+  {
+    "name": "trig",
+    "query": "sin(avalanche_gauge_metric_mmmmm_0_0) + cos(avalanche_gauge_metric_mmmmm_0_0)",
+    "instant": "OK",
+    "range": "OK",
+    "detail": "20 séries",
+    "ch_ms": 21,
+    "prom_ms": 1
+  },
+  {
+    "name": "deg_rad",
+    "query": "deg(rad(avalanche_gauge_metric_mmmmm_0_0))",
+    "instant": "OK",
+    "range": "OK",
+    "detail": "20 séries",
+    "ch_ms": 11,
+    "prom_ms": 2
+  },
+  {
+    "name": "label_replace",
+    "query": "label_replace(avalanche_gauge_metric_mmmmm_0_0, \"sid\", \"s-$1\", \"series_id\", \"(.*)\")",
+    "instant": "OK",
+    "range": "OK",
+    "detail": "20 séries",
+    "ch_ms": 11,
+    "prom_ms": 2
+  },
+  {
+    "name": "label_join",
+    "query": "label_join(avalanche_gauge_metric_mmmmm_0_0, \"j\", \"-\", \"job\", \"series_id\")",
+    "instant": "OK",
+    "range": "OK",
+    "detail": "20 séries",
+    "ch_ms": 11,
+    "prom_ms": 2
+  },
+  {
+    "name": "sort",
+    "query": "sort(avalanche_gauge_metric_mmmmm_0_0)",
+    "instant": "CH_ERROR",
+    "range": "CH_ERROR",
+    "detail": "Function sort is not implemented",
+    "ch_ms": 1,
+    "prom_ms": 1
+  },
+  {
+    "name": "sort_desc",
+    "query": "sort_desc(avalanche_gauge_metric_mmmmm_0_0)",
+    "instant": "CH_ERROR",
+    "range": "CH_ERROR",
+    "detail": "Function sort_desc is not implemented",
+    "ch_ms": 1,
+    "prom_ms": 1
+  },
+  {
+    "name": "sort_by_label",
+    "query": "sort_by_label(avalanche_gauge_metric_mmmmm_0_0, \"series_id\")",
+    "instant": "CH_ERROR",
+    "range": "CH_ERROR",
+    "detail": "Function sort_by_label is not implemented",
+    "ch_ms": 1,
+    "prom_ms": 2
+  },
+  {
+    "name": "absent",
+    "query": "absent(nao_existe)",
+    "instant": "OK",
+    "range": "OK",
+    "detail": "1 séries",
+    "ch_ms": 10,
+    "prom_ms": 1
+  },
+  {
+    "name": "absent_present",
+    "query": "absent(avalanche_gauge_metric_mmmmm_0_0)",
+    "instant": "OK",
+    "range": "OK",
+    "detail": "0 séries",
+    "ch_ms": 10,
+    "prom_ms": 1
+  },
+  {
+    "name": "scalar_vector",
+    "query": "vector(scalar(count(avalanche_gauge_metric_mmmmm_0_0)))",
+    "instant": "OK",
+    "range": "OK",
+    "detail": "1 séries",
+    "ch_ms": 10,
+    "prom_ms": 1
+  },
+  {
+    "name": "time",
+    "query": "time()",
+    "instant": "OK",
+    "range": "OK",
+    "detail": "1 séries",
+    "ch_ms": 1,
+    "prom_ms": 1
+  },
+  {
+    "name": "timestamp",
+    "query": "timestamp(avalanche_gauge_metric_mmmmm_0_0{series_id=\"1\"})",
+    "instant": "OK",
+    "range": "OK",
+    "detail": "1 séries",
+    "ch_ms": 13,
+    "prom_ms": 1
+  },
+  {
+    "name": "date_funcs",
+    "query": "hour(timestamp(avalanche_gauge_metric_mmmmm_0_0{series_id=\"1\"}))",
+    "instant": "OK",
+    "range": "OK",
+    "detail": "1 séries",
+    "ch_ms": 14,
+    "prom_ms": 1
+  },
+  {
+    "name": "minute",
+    "query": "minute()",
+    "instant": "OK",
+    "range": "OK",
+    "detail": "1 séries",
+    "ch_ms": 2,
+    "prom_ms": 1
+  },
+  {
+    "name": "day_of_week",
+    "query": "day_of_week()",
+    "instant": "OK",
+    "range": "OK",
+    "detail": "1 séries",
+    "ch_ms": 2,
+    "prom_ms": 1
+  },
+  {
+    "name": "pi_number",
+    "query": "pi()",
+    "instant": "OK",
+    "range": "OK",
+    "detail": "1 séries",
+    "ch_ms": 1,
+    "prom_ms": 1
+  },
+  {
+    "name": "subquery",
+    "query": "max_over_time(rate(avalanche_counter_metric_mmmmm_0_0_total[1m])[5m:30s])",
+    "instant": "OK",
+    "range": "OK",
+    "detail": "20 séries",
+    "ch_ms": 11,
+    "prom_ms": 1
+  },
+  {
+    "name": "subquery_nested",
+    "query": "avg_over_time(sum(rate(avalanche_counter_metric_mmmmm_0_0_total[1m]))[4m:1m])",
+    "instant": "OK",
+    "range": "OK",
+    "detail": "1 séries",
+    "ch_ms": 11,
+    "prom_ms": 1
+  },
+  {
+    "name": "empty_result",
+    "query": "avalanche_gauge_metric_mmmmm_0_0{series_id=\"nao_existe\"}",
+    "instant": "OK",
+    "range": "OK",
+    "detail": "0 séries",
+    "ch_ms": 11,
+    "prom_ms": 1
+  },
+  {
+    "name": "number_literal",
+    "query": "42",
+    "instant": "OK",
+    "range": "OK",
+    "detail": "1 séries",
+    "ch_ms": 1,
+    "prom_ms": 1
+  },
+  {
+    "name": "string_literal",
+    "query": "\"hello\"",
+    "instant": "OK",
+    "range": "n/a",
+    "detail": "1 séries",
+    "ch_ms": 2,
+    "prom_ms": 1
+  },
+  {
+    "name": "info_func",
+    "query": "info(rate(avalanche_counter_metric_mmmmm_0_0_total[2m]))",
+    "instant": "CH_ERROR",
+    "range": "CH_ERROR",
+    "detail": "mismatched input '(' expecting <EOF> at position 4 while parsing PromQL query: info(rate(avalanche_counter_metric_mmmmm_0_0_total[2m]))",
+    "ch_ms": 1,
+    "prom_ms": 2
+  },
+  {
+    "name": "real_rate_spans",
+    "query": "sum(rate(otelcol_receiver_accepted_spans_total[2m]))",
+    "instant": "OK",
+    "range": "OK",
+    "detail": "1 séries",
+    "ch_ms": 11,
+    "prom_ms": 1
+  },
+  {
+    "name": "real_hq_batch",
+    "query": "histogram_quantile(0.99, sum by (le) (rate(otelcol_processor_batch_batch_send_size_bucket[5m])))",
+    "instant": "OK",
+    "range": "OK",
+    "detail": "1 séries",
+    "ch_ms": 12,
+    "prom_ms": 2
+  }
+]

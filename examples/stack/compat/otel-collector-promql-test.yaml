@@ -1,0 +1,107 @@
+receivers:
+  otlp:
+    protocols:
+      grpc:
+        endpoint: 0.0.0.0:4317
+      http:
+        endpoint: 0.0.0.0:4318
+        cors:
+          allowed_origins: ["*"]
+
+  # Métricas reais e contínuas para testar PromQL: o próprio collector e o ClickHouse
+  prometheus:
+    config:
+      scrape_configs:
+        - job_name: otel-collector
+          scrape_interval: 15s
+          static_configs:
+            - targets: ["localhost:8888"]
+        - job_name: clickhouse
+          scrape_interval: 15s
+          static_configs:
+            - targets: ["clickhouse:9363"]
+        - job_name: avalanche
+          scrape_interval: 15s
+          static_configs:
+            - targets: ["avalanche:9001"]
+
+processors:
+  memory_limiter:
+    check_interval: 1s
+    limit_percentage: 75
+    spike_limit_percentage: 20
+  batch:
+    send_batch_size: 10000
+    timeout: 5s
+  resource_detection:
+    detectors: [env, system]
+    override: false
+
+exporters:
+  clickhouse:
+    endpoint: tcp://clickhouse:9000?dial_timeout=10s
+    username: ${env:CLICKHOUSE_USER}
+    password: ${env:CLICKHOUSE_PASSWORD}
+    database: default
+    create_schema: true
+    ttl: 72h
+    logs_table_name: otel_logs
+    traces_table_name: otel_traces
+    metrics_tables:
+      gauge: { name: otel_metrics_gauge }
+      sum: { name: otel_metrics_sum }
+      summary: { name: otel_metrics_summary }
+      histogram: { name: otel_metrics_histogram }
+      exponential_histogram: { name: otel_metrics_exponential_histogram }
+    timeout: 10s
+    retry_on_failure:
+      enabled: true
+      initial_interval: 5s
+      max_interval: 30s
+      max_elapsed_time: 300s
+  # Grava métricas na tabela TimeSeries (prometheus.metrics) -> consultável via PromQL
+  prometheus_remote_write:
+    endpoint: http://clickhouse:8123/prometheus/api/v1/write
+    auth:
+      authenticator: basicauth/clickhouse
+    tls:
+      insecure: true
+  # Referência: mesmos dados em um Prometheus real
+  prometheus_remote_write/reference:
+    endpoint: http://prometheus:9090/api/v1/write
+    tls:
+      insecure: true
+  debug:
+    verbosity: basic
+
+extensions:
+  health_check:
+    endpoint: 0.0.0.0:13133
+  basicauth/clickhouse:
+    client_auth:
+      username: ${env:CLICKHOUSE_USER}
+      password: ${env:CLICKHOUSE_PASSWORD}
+
+service:
+  extensions: [health_check, basicauth/clickhouse]
+  telemetry:
+    metrics:
+      readers:
+        - pull:
+            exporter:
+              prometheus:
+                host: 0.0.0.0
+                port: 8888
+  pipelines:
+    traces:
+      receivers: [otlp]
+      processors: [memory_limiter, resource_detection, batch]
+      exporters: [clickhouse]
+    metrics:
+      receivers: [otlp, prometheus]
+      processors: [memory_limiter, resource_detection, batch]
+      exporters: [clickhouse, prometheus_remote_write, prometheus_remote_write/reference]
+    logs:
+      receivers: [otlp]
+      processors: [memory_limiter, resource_detection, batch]
+      exporters: [clickhouse]

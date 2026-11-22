@@ -1,0 +1,10 @@
+.env
+*.env
+!.env.example
+/clickhouse-jaeger
+dist/
+__pycache__/
+*.pyc
+.DS_Store
+.idea/
+.vscode/

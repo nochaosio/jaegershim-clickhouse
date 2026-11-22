@@ -1,0 +1,1298 @@
+{
+  "run": "var1795360542",
+  "results": [
+    {
+      "section": "1-trace",
+      "name": "single_span legacy (1 spans)",
+      "ok": true,
+      "detail": "",
+      "note": ""
+    },
+    {
+      "section": "1-trace",
+      "name": "single_span Grafana",
+      "ok": true,
+      "detail": "",
+      "note": ""
+    },
+    {
+      "section": "1-trace",
+      "name": "single_span v3/OTLP",
+      "ok": true,
+      "detail": "",
+      "note": ""
+    },
+    {
+      "section": "1-trace",
+      "name": "all_kinds legacy (7 spans)",
+      "ok": true,
+      "detail": "",
+      "note": ""
+    },
+    {
+      "section": "1-trace",
+      "name": "all_kinds Grafana",
+      "ok": true,
+      "detail": "",
+      "note": ""
+    },
+    {
+      "section": "1-trace",
+      "name": "all_kinds v3/OTLP",
+      "ok": true,
+      "detail": "",
+      "note": ""
+    },
+    {
+      "section": "1-trace",
+      "name": "deep_chain_30 legacy (30 spans)",
+      "ok": true,
+      "detail": "",
+      "note": ""
+    },
+    {
+      "section": "1-trace",
+      "name": "deep_chain_30 Grafana",
+      "ok": true,
+      "detail": "",
+      "note": ""
+    },
+    {
+      "section": "1-trace",
+      "name": "deep_chain_30 v3/OTLP",
+      "ok": true,
+      "detail": "",
+      "note": ""
+    },
+    {
+      "section": "1-trace",
+      "name": "wide_fanout_300 legacy (301 spans)",
+      "ok": true,
+      "detail": "",
+      "note": ""
+    },
+    {
+      "section": "1-trace",
+      "name": "wide_fanout_300 Grafana",
+      "ok": true,
+      "detail": "",
+      "note": ""
+    },
+    {
+      "section": "1-trace",
+      "name": "wide_fanout_300 v3/OTLP",
+      "ok": true,
+      "detail": "",
+      "note": ""
+    },
+    {
+      "section": "1-trace",
+      "name": "large_1500_spans legacy (1500 spans)",
+      "ok": true,
+      "detail": "",
+      "note": ""
+    },
+    {
+      "section": "1-trace",
+      "name": "large_1500_spans Grafana",
+      "ok": true,
+      "detail": "",
+      "note": ""
+    },
+    {
+      "section": "1-trace",
+      "name": "large_1500_spans v3/OTLP",
+      "ok": true,
+      "detail": "",
+      "note": ""
+    },
+    {
+      "section": "1-trace",
+      "name": "orphan_no_root legacy (2 spans)",
+      "ok": true,
+      "detail": "",
+      "note": ""
+    },
+    {
+      "section": "1-trace",
+      "name": "orphan_no_root Grafana",
+      "ok": true,
+      "detail": "",
+      "note": ""
+    },
+    {
+      "section": "1-trace",
+      "name": "orphan_no_root v3/OTLP",
+      "ok": true,
+      "detail": "",
+      "note": ""
+    },
+    {
+      "section": "1-trace",
+      "name": "multi_root legacy (3 spans)",
+      "ok": true,
+      "detail": "",
+      "note": ""
+    },
+    {
+      "section": "1-trace",
+      "name": "multi_root Grafana",
+      "ok": true,
+      "detail": "",
+      "note": ""
+    },
+    {
+      "section": "1-trace",
+      "name": "multi_root v3/OTLP",
+      "ok": true,
+      "detail": "",
+      "note": ""
+    },
+    {
+      "section": "1-trace",
+      "name": "messaging_async legacy (3 spans)",
+      "ok": true,
+      "detail": "",
+      "note": ""
+    },
+    {
+      "section": "1-trace",
+      "name": "messaging_async Grafana",
+      "ok": true,
+      "detail": "",
+      "note": ""
+    },
+    {
+      "section": "1-trace",
+      "name": "messaging_async v3/OTLP",
+      "ok": true,
+      "detail": "",
+      "note": ""
+    },
+    {
+      "section": "1-trace",
+      "name": "messaging_async legacy (1 spans)",
+      "ok": true,
+      "detail": "",
+      "note": ""
+    },
+    {
+      "section": "1-trace",
+      "name": "messaging_async Grafana",
+      "ok": true,
+      "detail": "",
+      "note": ""
+    },
+    {
+      "section": "1-trace",
+      "name": "messaging_async v3/OTLP",
+      "ok": true,
+      "detail": "",
+      "note": ""
+    },
+    {
+      "section": "1-trace",
+      "name": "links_multiple legacy (2 spans)",
+      "ok": true,
+      "detail": "",
+      "note": ""
+    },
+    {
+      "section": "1-trace",
+      "name": "links_multiple Grafana",
+      "ok": true,
+      "detail": "",
+      "note": ""
+    },
+    {
+      "section": "1-trace",
+      "name": "links_multiple v3/OTLP",
+      "ok": true,
+      "detail": "",
+      "note": ""
+    },
+    {
+      "section": "1-trace",
+      "name": "many_events_52 legacy (1 spans)",
+      "ok": true,
+      "detail": "",
+      "note": ""
+    },
+    {
+      "section": "1-trace",
+      "name": "many_events_52 Grafana",
+      "ok": true,
+      "detail": "",
+      "note": ""
+    },
+    {
+      "section": "1-trace",
+      "name": "many_events_52 v3/OTLP",
+      "ok": true,
+      "detail": "",
+      "note": ""
+    },
+    {
+      "section": "1-trace",
+      "name": "status_variants legacy (5 spans)",
+      "ok": true,
+      "detail": "",
+      "note": ""
+    },
+    {
+      "section": "1-trace",
+      "name": "status_variants Grafana",
+      "ok": true,
+      "detail": "",
+      "note": ""
+    },
+    {
+      "section": "1-trace",
+      "name": "status_variants v3/OTLP",
+      "ok": true,
+      "detail": "",
+      "note": ""
+    },
+    {
+      "section": "1-trace",
+      "name": "attribute_types legacy (1 spans)",
+      "ok": true,
+      "detail": "",
+      "note": ""
+    },
+    {
+      "section": "1-trace",
+      "name": "attribute_types Grafana",
+      "ok": true,
+      "detail": "",
+      "note": ""
+    },
+    {
+      "section": "1-trace",
+      "name": "attribute_types v3/OTLP",
+      "ok": true,
+      "detail": "",
+      "note": ""
+    },
+    {
+      "section": "1-trace",
+      "name": "span_resource_collision legacy (1 spans)",
+      "ok": true,
+      "detail": "",
+      "note": ""
+    },
+    {
+      "section": "1-trace",
+      "name": "span_resource_collision Grafana",
+      "ok": true,
+      "detail": "",
+      "note": ""
+    },
+    {
+      "section": "1-trace",
+      "name": "span_resource_collision v3/OTLP",
+      "ok": true,
+      "detail": "",
+      "note": ""
+    },
+    {
+      "section": "1-trace",
+      "name": "two_instances_same_service legacy (2 spans)",
+      "ok": true,
+      "detail": "",
+      "note": ""
+    },
+    {
+      "section": "1-trace",
+      "name": "two_instances_same_service Grafana",
+      "ok": true,
+      "detail": "",
+      "note": ""
+    },
+    {
+      "section": "1-trace",
+      "name": "two_instances_same_service v3/OTLP",
+      "ok": true,
+      "detail": "",
+      "note": ""
+    },
+    {
+      "section": "1-trace",
+      "name": "no_service_name legacy (1 spans)",
+      "ok": true,
+      "detail": "",
+      "note": ""
+    },
+    {
+      "section": "1-trace",
+      "name": "no_service_name Grafana",
+      "ok": true,
+      "detail": "",
+      "note": ""
+    },
+    {
+      "section": "1-trace",
+      "name": "no_service_name v3/OTLP",
+      "ok": true,
+      "detail": "",
+      "note": ""
+    },
+    {
+      "section": "1-trace",
+      "name": "multiple_scopes legacy (3 spans)",
+      "ok": true,
+      "detail": "",
+      "note": ""
+    },
+    {
+      "section": "1-trace",
+      "name": "multiple_scopes Grafana",
+      "ok": true,
+      "detail": "",
+      "note": ""
+    },
+    {
+      "section": "1-trace",
+      "name": "multiple_scopes v3/OTLP",
+      "ok": true,
+      "detail": "",
+      "note": ""
+    },
+    {
+      "section": "1-trace",
+      "name": "trace_state legacy (1 spans)",
+      "ok": true,
+      "detail": "",
+      "note": ""
+    },
+    {
+      "section": "1-trace",
+      "name": "trace_state Grafana",
+      "ok": true,
+      "detail": "",
+      "note": ""
+    },
+    {
+      "section": "1-trace",
+      "name": "trace_state v3/OTLP",
+      "ok": true,
+      "detail": "",
+      "note": ""
+    },
+    {
+      "section": "1-trace",
+      "name": "zero_and_1h_duration legacy (3 spans)",
+      "ok": true,
+      "detail": "",
+      "note": ""
+    },
+    {
+      "section": "1-trace",
+      "name": "zero_and_1h_duration Grafana",
+      "ok": true,
+      "detail": "",
+      "note": ""
+    },
+    {
+      "section": "1-trace",
+      "name": "zero_and_1h_duration v3/OTLP",
+      "ok": true,
+      "detail": "",
+      "note": ""
+    },
+    {
+      "section": "1-trace",
+      "name": "clock_skew_child_outside_parent legacy (2 spans)",
+      "ok": true,
+      "detail": "",
+      "note": ""
+    },
+    {
+      "section": "1-trace",
+      "name": "clock_skew_child_outside_parent Grafana",
+      "ok": true,
+      "detail": "",
+      "note": ""
+    },
+    {
+      "section": "1-trace",
+      "name": "clock_skew_child_outside_parent v3/OTLP",
+      "ok": true,
+      "detail": "",
+      "note": ""
+    },
+    {
+      "section": "1-trace",
+      "name": "duplicate_span_id_zipkin_style legacy (2 spans)",
+      "ok": true,
+      "detail": "",
+      "note": ""
+    },
+    {
+      "section": "1-trace",
+      "name": "duplicate_span_id_zipkin_style Grafana",
+      "ok": true,
+      "detail": "",
+      "note": ""
+    },
+    {
+      "section": "1-trace",
+      "name": "duplicate_span_id_zipkin_style v3/OTLP",
+      "ok": true,
+      "detail": "",
+      "note": ""
+    },
+    {
+      "section": "1-trace",
+      "name": "trace_id_leading_zeros legacy (1 spans)",
+      "ok": true,
+      "detail": "",
+      "note": ""
+    },
+    {
+      "section": "1-trace",
+      "name": "trace_id_leading_zeros Grafana",
+      "ok": true,
+      "detail": "",
+      "note": ""
+    },
+    {
+      "section": "1-trace",
+      "name": "trace_id_leading_zeros v3/OTLP",
+      "ok": true,
+      "detail": "",
+      "note": ""
+    },
+    {
+      "section": "1-trace",
+      "name": "unicode_names legacy (2 spans)",
+      "ok": true,
+      "detail": "",
+      "note": ""
+    },
+    {
+      "section": "1-trace",
+      "name": "unicode_names Grafana",
+      "ok": true,
+      "detail": "",
+      "note": ""
+    },
+    {
+      "section": "1-trace",
+      "name": "unicode_names v3/OTLP",
+      "ok": true,
+      "detail": "",
+      "note": ""
+    },
+    {
+      "section": "1-trace",
+      "name": "empty_span_name legacy (1 spans)",
+      "ok": true,
+      "detail": "",
+      "note": ""
+    },
+    {
+      "section": "1-trace",
+      "name": "empty_span_name Grafana",
+      "ok": true,
+      "detail": "",
+      "note": ""
+    },
+    {
+      "section": "1-trace",
+      "name": "empty_span_name v3/OTLP",
+      "ok": true,
+      "detail": "",
+      "note": ""
+    },
+    {
+      "section": "1-trace",
+      "name": "old_timestamp_30min legacy (1 spans)",
+      "ok": true,
+      "detail": "",
+      "note": ""
+    },
+    {
+      "section": "1-trace",
+      "name": "old_timestamp_30min Grafana",
+      "ok": true,
+      "detail": "",
+      "note": ""
+    },
+    {
+      "section": "1-trace",
+      "name": "old_timestamp_30min v3/OTLP",
+      "ok": true,
+      "detail": "",
+      "note": ""
+    },
+    {
+      "section": "2-busca",
+      "name": "single_span legacy",
+      "ok": true,
+      "detail": "1 traces",
+      "note": ""
+    },
+    {
+      "section": "2-busca",
+      "name": "single_span v3 summaries",
+      "ok": true,
+      "detail": "1 resumos",
+      "note": ""
+    },
+    {
+      "section": "2-busca",
+      "name": "single_span Grafana",
+      "ok": true,
+      "detail": "1 traces",
+      "note": ""
+    },
+    {
+      "section": "2-busca",
+      "name": "all_kinds legacy",
+      "ok": true,
+      "detail": "1 traces",
+      "note": ""
+    },
+    {
+      "section": "2-busca",
+      "name": "all_kinds v3 summaries",
+      "ok": true,
+      "detail": "1 resumos",
+      "note": ""
+    },
+    {
+      "section": "2-busca",
+      "name": "all_kinds Grafana",
+      "ok": true,
+      "detail": "1 traces",
+      "note": ""
+    },
+    {
+      "section": "2-busca",
+      "name": "deep_chain_30 legacy",
+      "ok": true,
+      "detail": "1 traces",
+      "note": ""
+    },
+    {
+      "section": "2-busca",
+      "name": "deep_chain_30 v3 summaries",
+      "ok": true,
+      "detail": "1 resumos",
+      "note": ""
+    },
+    {
+      "section": "2-busca",
+      "name": "deep_chain_30 Grafana",
+      "ok": true,
+      "detail": "1 traces",
+      "note": ""
+    },
+    {
+      "section": "2-busca",
+      "name": "wide_fanout_300 legacy",
+      "ok": true,
+      "detail": "1 traces",
+      "note": ""
+    },
+    {
+      "section": "2-busca",
+      "name": "wide_fanout_300 v3 summaries",
+      "ok": true,
+      "detail": "1 resumos",
+      "note": ""
+    },
+    {
+      "section": "2-busca",
+      "name": "wide_fanout_300 Grafana",
+      "ok": true,
+      "detail": "1 traces",
+      "note": ""
+    },
+    {
+      "section": "2-busca",
+      "name": "large_1500_spans legacy",
+      "ok": true,
+      "detail": "1 traces",
+      "note": ""
+    },
+    {
+      "section": "2-busca",
+      "name": "large_1500_spans v3 summaries",
+      "ok": true,
+      "detail": "1 resumos",
+      "note": ""
+    },
+    {
+      "section": "2-busca",
+      "name": "large_1500_spans Grafana",
+      "ok": true,
+      "detail": "1 traces",
+      "note": ""
+    },
+    {
+      "section": "2-busca",
+      "name": "orphan_no_root legacy",
+      "ok": true,
+      "detail": "1 traces",
+      "note": ""
+    },
+    {
+      "section": "2-busca",
+      "name": "orphan_no_root v3 summaries",
+      "ok": true,
+      "detail": "1 resumos",
+      "note": ""
+    },
+    {
+      "section": "2-busca",
+      "name": "orphan_no_root Grafana",
+      "ok": true,
+      "detail": "1 traces",
+      "note": ""
+    },
+    {
+      "section": "2-busca",
+      "name": "multi_root legacy",
+      "ok": true,
+      "detail": "1 traces",
+      "note": ""
+    },
+    {
+      "section": "2-busca",
+      "name": "multi_root v3 summaries",
+      "ok": true,
+      "detail": "1 resumos",
+      "note": ""
+    },
+    {
+      "section": "2-busca",
+      "name": "multi_root Grafana",
+      "ok": true,
+      "detail": "1 traces",
+      "note": ""
+    },
+    {
+      "section": "2-busca",
+      "name": "messaging_async legacy",
+      "ok": true,
+      "detail": "1 traces",
+      "note": ""
+    },
+    {
+      "section": "2-busca",
+      "name": "messaging_async v3 summaries",
+      "ok": true,
+      "detail": "1 resumos",
+      "note": ""
+    },
+    {
+      "section": "2-busca",
+      "name": "messaging_async Grafana",
+      "ok": true,
+      "detail": "1 traces",
+      "note": ""
+    },
+    {
+      "section": "2-busca",
+      "name": "links_multiple legacy",
+      "ok": true,
+      "detail": "1 traces",
+      "note": ""
+    },
+    {
+      "section": "2-busca",
+      "name": "links_multiple v3 summaries",
+      "ok": true,
+      "detail": "1 resumos",
+      "note": ""
+    },
+    {
+      "section": "2-busca",
+      "name": "links_multiple Grafana",
+      "ok": true,
+      "detail": "1 traces",
+      "note": ""
+    },
+    {
+      "section": "2-busca",
+      "name": "many_events_52 legacy",
+      "ok": true,
+      "detail": "1 traces",
+      "note": ""
+    },
+    {
+      "section": "2-busca",
+      "name": "many_events_52 v3 summaries",
+      "ok": true,
+      "detail": "1 resumos",
+      "note": ""
+    },
+    {
+      "section": "2-busca",
+      "name": "many_events_52 Grafana",
+      "ok": true,
+      "detail": "1 traces",
+      "note": ""
+    },
+    {
+      "section": "2-busca",
+      "name": "status_variants legacy",
+      "ok": true,
+      "detail": "1 traces",
+      "note": ""
+    },
+    {
+      "section": "2-busca",
+      "name": "status_variants v3 summaries",
+      "ok": true,
+      "detail": "1 resumos",
+      "note": ""
+    },
+    {
+      "section": "2-busca",
+      "name": "status_variants Grafana",
+      "ok": true,
+      "detail": "1 traces",
+      "note": ""
+    },
+    {
+      "section": "2-busca",
+      "name": "attribute_types legacy",
+      "ok": true,
+      "detail": "1 traces",
+      "note": ""
+    },
+    {
+      "section": "2-busca",
+      "name": "attribute_types v3 summaries",
+      "ok": true,
+      "detail": "1 resumos",
+      "note": ""
+    },
+    {
+      "section": "2-busca",
+      "name": "attribute_types Grafana",
+      "ok": true,
+      "detail": "1 traces",
+      "note": ""
+    },
+    {
+      "section": "2-busca",
+      "name": "span_resource_collision legacy",
+      "ok": true,
+      "detail": "1 traces",
+      "note": ""
+    },
+    {
+      "section": "2-busca",
+      "name": "span_resource_collision v3 summaries",
+      "ok": true,
+      "detail": "1 resumos",
+      "note": ""
+    },
+    {
+      "section": "2-busca",
+      "name": "span_resource_collision Grafana",
+      "ok": true,
+      "detail": "1 traces",
+      "note": ""
+    },
+    {
+      "section": "2-busca",
+      "name": "two_instances_same_service legacy",
+      "ok": true,
+      "detail": "1 traces",
+      "note": ""
+    },
+    {
+      "section": "2-busca",
+      "name": "two_instances_same_service v3 summaries",
+      "ok": true,
+      "detail": "1 resumos",
+      "note": ""
+    },
+    {
+      "section": "2-busca",
+      "name": "two_instances_same_service Grafana",
+      "ok": true,
+      "detail": "1 traces",
+      "note": ""
+    },
+    {
+      "section": "2-busca",
+      "name": "no_service_name legacy",
+      "ok": true,
+      "detail": "1 traces",
+      "note": ""
+    },
+    {
+      "section": "2-busca",
+      "name": "no_service_name v3 summaries",
+      "ok": true,
+      "detail": "1 resumos",
+      "note": ""
+    },
+    {
+      "section": "2-busca",
+      "name": "no_service_name Grafana",
+      "ok": true,
+      "detail": "1 traces",
+      "note": ""
+    },
+    {
+      "section": "2-busca",
+      "name": "multiple_scopes legacy",
+      "ok": true,
+      "detail": "1 traces",
+      "note": ""
+    },
+    {
+      "section": "2-busca",
+      "name": "multiple_scopes v3 summaries",
+      "ok": true,
+      "detail": "1 resumos",
+      "note": ""
+    },
+    {
+      "section": "2-busca",
+      "name": "multiple_scopes Grafana",
+      "ok": true,
+      "detail": "1 traces",
+      "note": ""
+    },
+    {
+      "section": "2-busca",
+      "name": "trace_state legacy",
+      "ok": true,
+      "detail": "1 traces",
+      "note": ""
+    },
+    {
+      "section": "2-busca",
+      "name": "trace_state v3 summaries",
+      "ok": true,
+      "detail": "1 resumos",
+      "note": ""
+    },
+    {
+      "section": "2-busca",
+      "name": "trace_state Grafana",
+      "ok": true,
+      "detail": "1 traces",
+      "note": ""
+    },
+    {
+      "section": "2-busca",
+      "name": "zero_and_1h_duration legacy",
+      "ok": true,
+      "detail": "1 traces",
+      "note": ""
+    },
+    {
+      "section": "2-busca",
+      "name": "zero_and_1h_duration v3 summaries",
+      "ok": true,
+      "detail": "1 resumos",
+      "note": ""
+    },
+    {
+      "section": "2-busca",
+      "name": "zero_and_1h_duration Grafana",
+      "ok": true,
+      "detail": "1 traces",
+      "note": ""
+    },
+    {
+      "section": "2-busca",
+      "name": "clock_skew_child_outside_parent legacy",
+      "ok": true,
+      "detail": "1 traces",
+      "note": ""
+    },
+    {
+      "section": "2-busca",
+      "name": "clock_skew_child_outside_parent v3 summaries",
+      "ok": true,
+      "detail": "1 resumos",
+      "note": ""
+    },
+    {
+      "section": "2-busca",
+      "name": "clock_skew_child_outside_parent Grafana",
+      "ok": true,
+      "detail": "1 traces",
+      "note": ""
+    },
+    {
+      "section": "2-busca",
+      "name": "duplicate_span_id_zipkin_style legacy",
+      "ok": true,
+      "detail": "1 traces",
+      "note": ""
+    },
+    {
+      "section": "2-busca",
+      "name": "duplicate_span_id_zipkin_style v3 summaries",
+      "ok": true,
+      "detail": "1 resumos",
+      "note": ""
+    },
+    {
+      "section": "2-busca",
+      "name": "duplicate_span_id_zipkin_style Grafana",
+      "ok": true,
+      "detail": "1 traces",
+      "note": ""
+    },
+    {
+      "section": "2-busca",
+      "name": "trace_id_leading_zeros legacy",
+      "ok": true,
+      "detail": "1 traces",
+      "note": ""
+    },
+    {
+      "section": "2-busca",
+      "name": "trace_id_leading_zeros v3 summaries",
+      "ok": true,
+      "detail": "1 resumos",
+      "note": ""
+    },
+    {
+      "section": "2-busca",
+      "name": "trace_id_leading_zeros Grafana",
+      "ok": true,
+      "detail": "1 traces",
+      "note": ""
+    },
+    {
+      "section": "2-busca",
+      "name": "unicode_names legacy",
+      "ok": true,
+      "detail": "1 traces",
+      "note": ""
+    },
+    {
+      "section": "2-busca",
+      "name": "unicode_names v3 summaries",
+      "ok": true,
+      "detail": "1 resumos",
+      "note": ""
+    },
+    {
+      "section": "2-busca",
+      "name": "unicode_names Grafana",
+      "ok": true,
+      "detail": "1 traces",
+      "note": ""
+    },
+    {
+      "section": "2-busca",
+      "name": "empty_span_name legacy",
+      "ok": true,
+      "detail": "1 traces",
+      "note": ""
+    },
+    {
+      "section": "2-busca",
+      "name": "empty_span_name v3 summaries",
+      "ok": true,
+      "detail": "1 resumos",
+      "note": ""
+    },
+    {
+      "section": "2-busca",
+      "name": "empty_span_name Grafana",
+      "ok": true,
+      "detail": "1 traces",
+      "note": ""
+    },
+    {
+      "section": "2-busca",
+      "name": "old_timestamp_30min legacy",
+      "ok": true,
+      "detail": "1 traces",
+      "note": ""
+    },
+    {
+      "section": "2-busca",
+      "name": "old_timestamp_30min v3 summaries",
+      "ok": true,
+      "detail": "1 resumos",
+      "note": ""
+    },
+    {
+      "section": "2-busca",
+      "name": "old_timestamp_30min Grafana",
+      "ok": true,
+      "detail": "1 traces",
+      "note": ""
+    },
+    {
+      "section": "3-recurso",
+      "name": "span.kind=producer",
+      "ok": true,
+      "detail": "legacy=1 v3=1 traces",
+      "note": ""
+    },
+    {
+      "section": "3-recurso",
+      "name": "span.kind=consumer",
+      "ok": true,
+      "detail": "legacy=1 v3=1 traces",
+      "note": ""
+    },
+    {
+      "section": "3-recurso",
+      "name": "span.kind=unspecified",
+      "ok": true,
+      "detail": "legacy=1 v3=1 traces",
+      "note": ""
+    },
+    {
+      "section": "3-recurso",
+      "name": "bool a.bool_t=true",
+      "ok": true,
+      "detail": "legacy=1 v3=1 traces",
+      "note": ""
+    },
+    {
+      "section": "3-recurso",
+      "name": "int a.int=42",
+      "ok": true,
+      "detail": "legacy=1 v3=1 traces",
+      "note": ""
+    },
+    {
+      "section": "3-recurso",
+      "name": "int negativo a.neg=-7",
+      "ok": true,
+      "detail": "legacy=1 v3=1 traces",
+      "note": ""
+    },
+    {
+      "section": "3-recurso",
+      "name": "double a.double=0.5",
+      "ok": true,
+      "detail": "legacy=1 v3=1 traces",
+      "note": ""
+    },
+    {
+      "section": "3-recurso",
+      "name": "array a.arr_str",
+      "ok": true,
+      "detail": "legacy=1 v3=1 traces",
+      "note": ""
+    },
+    {
+      "section": "3-recurso",
+      "name": "map a.map",
+      "ok": true,
+      "detail": "legacy=1 v3=1 traces",
+      "note": ""
+    },
+    {
+      "section": "3-recurso",
+      "name": "string vazia a.empty=''",
+      "ok": true,
+      "detail": "legacy=1 v3=1 traces",
+      "note": ""
+    },
+    {
+      "section": "3-recurso",
+      "name": "unicode a.unicode",
+      "ok": true,
+      "detail": "legacy=1 v3=1 traces",
+      "note": ""
+    },
+    {
+      "section": "3-recurso",
+      "name": "chave com espaço",
+      "ok": true,
+      "detail": "legacy=1 v3=1 traces",
+      "note": ""
+    },
+    {
+      "section": "3-recurso",
+      "name": "valor de 10KB",
+      "ok": true,
+      "detail": "legacy=1 v3=1 traces",
+      "note": ""
+    },
+    {
+      "section": "3-recurso",
+      "name": "colisão: valor do span",
+      "ok": true,
+      "detail": "legacy=1 v3=1 traces",
+      "note": ""
+    },
+    {
+      "section": "3-recurso",
+      "name": "colisão: valor do resource",
+      "ok": true,
+      "detail": "legacy=1 v3=1 traces",
+      "note": ""
+    },
+    {
+      "section": "3-recurso",
+      "name": "campo de evento exception.type",
+      "ok": true,
+      "detail": "legacy=1 v3=1 traces",
+      "note": ""
+    },
+    {
+      "section": "3-recurso",
+      "name": "campo de evento int i=4",
+      "ok": true,
+      "detail": "legacy=1 v3=1 traces",
+      "note": ""
+    },
+    {
+      "section": "3-recurso",
+      "name": "minDuration=30m (span de 1h)",
+      "ok": true,
+      "detail": "legacy=1 v3=1 traces",
+      "note": ""
+    },
+    {
+      "section": "3-recurso",
+      "name": "maxDuration=1us (span de 0ns/1ns)",
+      "ok": true,
+      "detail": "legacy=1 v3=1 traces",
+      "note": ""
+    },
+    {
+      "section": "3-recurso",
+      "name": "error=true (status sem mensagem)",
+      "ok": true,
+      "detail": "legacy=1 v3=1 traces",
+      "note": ""
+    },
+    {
+      "section": "3-recurso",
+      "name": "operação vazia",
+      "ok": true,
+      "detail": "legacy=1 v3=1 traces",
+      "note": ""
+    },
+    {
+      "section": "3-recurso",
+      "name": "operação unicode",
+      "ok": true,
+      "detail": "legacy=1 v3=1 traces",
+      "note": ""
+    },
+    {
+      "section": "3-recurso",
+      "name": "host.name de instância",
+      "ok": true,
+      "detail": "legacy=1 v3=1 traces",
+      "note": ""
+    },
+    {
+      "section": "3-recurso",
+      "name": "trace antigo (30min)",
+      "ok": true,
+      "detail": "legacy=1 v3=1 traces",
+      "note": ""
+    },
+    {
+      "section": "4-meta",
+      "name": "serviços novos listados",
+      "ok": true,
+      "detail": "faltando ClickHouse=[] Jaeger=[]",
+      "note": ""
+    },
+    {
+      "section": "4-meta",
+      "name": "serviço do span SEM service.name",
+      "ok": true,
+      "detail": "ClickHouse lista [], Jaeger lista []",
+      "note": ""
+    },
+    {
+      "section": "4-meta",
+      "name": "operações svc-kinds",
+      "ok": true,
+      "detail": "7 ops",
+      "note": ""
+    },
+    {
+      "section": "4-meta",
+      "name": "operações v3 svc-kinds",
+      "ok": true,
+      "detail": "",
+      "note": ""
+    },
+    {
+      "section": "4-meta",
+      "name": "operações serviço-ação 日本",
+      "ok": true,
+      "detail": "2 ops",
+      "note": ""
+    },
+    {
+      "section": "4-meta",
+      "name": "operações v3 serviço-ação 日本",
+      "ok": true,
+      "detail": "",
+      "note": ""
+    },
+    {
+      "section": "4-meta",
+      "name": "operações svc-emptyname",
+      "ok": true,
+      "detail": "1 ops",
+      "note": ""
+    },
+    {
+      "section": "4-meta",
+      "name": "operações v3 svc-emptyname",
+      "ok": true,
+      "detail": "",
+      "note": ""
+    },
+    {
+      "section": "4-meta",
+      "name": "operações svc-large-1",
+      "ok": true,
+      "detail": "15 ops",
+      "note": ""
+    },
+    {
+      "section": "4-meta",
+      "name": "operações v3 svc-large-1",
+      "ok": true,
+      "detail": "",
+      "note": ""
+    },
+    {
+      "section": "4-meta",
+      "name": "operações svc-wide-worker",
+      "ok": true,
+      "detail": "10 ops",
+      "note": ""
+    },
+    {
+      "section": "4-meta",
+      "name": "operações v3 svc-wide-worker",
+      "ok": true,
+      "detail": "",
+      "note": ""
+    },
+    {
+      "section": "4-meta",
+      "name": "dependências dos casos (40 arestas no Jaeger)",
+      "ok": true,
+      "detail": "",
+      "note": ""
+    }
+  ],
+  "type_diffs": {
+    "wide_fanout_300": 300,
+    "large_1500_spans": 1499,
+    "attribute_types": 7
+  }
+}

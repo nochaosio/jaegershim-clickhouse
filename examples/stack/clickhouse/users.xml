@@ -1,0 +1,13 @@
+<clickhouse>
+    <profiles>
+        <default>
+            <allow_experimental_json_type>1</allow_experimental_json_type>
+            <log_queries>1</log_queries>
+            <!-- PromQL / TimeSeries (private preview) -->
+            <enable_time_series_table>1</enable_time_series_table>
+            <enable_time_series_aggregate_functions>1</enable_time_series_aggregate_functions>
+            <async_insert>1</async_insert>
+            <wait_for_async_insert>1</wait_for_async_insert>
+        </default>
+    </profiles>
+</clickhouse>
