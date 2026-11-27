@@ -22,7 +22,7 @@
 
 ## Publishing checklist
 1. Public repo, Apache-2.0, README in English, CHANGELOG, SECURITY ✅
-2. First tag `v0.1.0` → image `ghcr.io/nochaosio/clickhouse-jaeger` (release workflow)
+2. First tag `v0.1.0` → image `ghcr.io/nochaosio/jaegershim-clickhouse` (release workflow)
 3. Submit to the [OpenTelemetry Registry](https://opentelemetry.io/ecosystem/registry/) (PR to `open-telemetry/opentelemetry.io`, `data/registry/`)
 4. Propose a "third-party storage / compatible query service" mention to Jaeger (issue/discussion in `jaegertracing/jaeger`), ideally after the Remote Storage gRPC API
 5. Share with ClickHouse (ClickStack community / integrations docs) and Grafana community (Jaeger datasource works with it)

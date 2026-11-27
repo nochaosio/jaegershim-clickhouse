@@ -1,12 +1,12 @@
 #!/usr/bin/env python3
-"""De-para: Jaeger original x clickhouse-jaeger (ClickHouse).
+"""De-para: Jaeger original x jaegershim (ClickHouse).
 
 Gera traces determinísticos (test/compat/gen_traces.py) que o OTel Collector envia ao
 mesmo tempo para o ClickHouse, para um Jaeger 2.23 (API v3 / Jaeger UI) e para um
 Jaeger 2.20 (API legacy / Grafana). Depois executa os MESMOS cenários nos dois
 lados e compara os resultados:
 
-  A. via Grafana (datasource Jaeger nativo): "Jaeger (original 2.20)" x "ClickHouse Jaeger"
+  A. via Grafana (datasource Jaeger nativo): "Jaeger (original 2.20)" x "jaegershim"
   B. API legacy direta (/api/*):            Jaeger 2.20               x adaptador
   C. API v3 direta (/api/v3/*, Jaeger UI):  Jaeger 2.23               x adaptador
   D. Jaeger UI servido pelo adaptador (assets + chamadas no formato do UI)
@@ -23,7 +23,7 @@ REF_LEGACY = "http://localhost:16688"   # Jaeger 2.20
 REF_V3 = "http://localhost:16687"       # Jaeger 2.23
 GRAFANA = "http://localhost:3000"
 G_AUTH = "Basic " + base64.b64encode(b"admin:admin").decode()
-DS_OURS, DS_REF = "clickhouse-jaeger", "jaeger-original"
+DS_OURS, DS_REF = "jaegershim", "jaeger-original"
 TEST_SERVICES = {"frontend", "checkout", "payments", "postgres"}
 
 results = []
@@ -251,7 +251,7 @@ def main():
     SCN = scenarios(run)
 
     # ======== A. Grafana ========
-    print("== A. Grafana: datasource Jaeger -> Jaeger original 2.20  x  ClickHouse Jaeger")
+    print("== A. Grafana: datasource Jaeger -> Jaeger original 2.20  x  jaegershim")
     for ds in (DS_REF, DS_OURS):
         c, h = http("GET", f"{GRAFANA}/api/datasources/uid/{ds}/health", headers={"Authorization": G_AUTH})
         record("A-grafana", f"health {ds}", c == 200 and h.get("status") == "OK", h.get("message", ""))

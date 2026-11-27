@@ -11,7 +11,7 @@ import (
 	"testing"
 	"time"
 
-	"github.com/nochaosio/clickhouse-jaeger/internal/chstore"
+	"github.com/nochaosio/jaegershim-clickhouse/internal/chstore"
 )
 
 // ---------- fake store ----------

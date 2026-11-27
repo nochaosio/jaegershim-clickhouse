@@ -1,4 +1,4 @@
--- Usuário somente leitura do clickhouse-jaeger.
+-- Usuário somente leitura do jaegershim.
 -- readonly=2: bloqueia escrita/DDL mas permite ajustar settings (o driver envia
 -- max_execution_time derivado do timeout); MAX impede subir os limites.
 CREATE SETTINGS PROFILE IF NOT EXISTS jaeger_reader_limits SETTINGS readonly = 2 CONST, max_execution_time = 30 MAX 30, max_memory_usage = 4000000000 MAX 4000000000, max_result_rows = 2000000 MAX 2000000;

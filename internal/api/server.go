@@ -13,7 +13,7 @@ import (
 	"strings"
 	"time"
 
-	"github.com/nochaosio/clickhouse-jaeger/internal/chstore"
+	"github.com/nochaosio/jaegershim-clickhouse/internal/chstore"
 )
 
 // Store é a interface usada pelos handlers (permite testes sem ClickHouse).
@@ -383,7 +383,7 @@ func (s *Server) health(w http.ResponseWriter, r *http.Request) {
 
 func (s *Server) ui(w http.ResponseWriter, r *http.Request) {
 	if s.uiDir == "" {
-		writeJSON(w, 200, map[string]string{"service": "clickhouse-jaeger", "version": s.version})
+		writeJSON(w, 200, map[string]string{"service": "jaegershim", "version": s.version})
 		return
 	}
 	clean := filepath.Clean("/" + r.URL.Path)
@@ -402,7 +402,7 @@ func (s *Server) ui(w http.ResponseWriter, r *http.Request) {
 		return
 	}
 	html := strings.Replace(string(b), "const JAEGER_VERSION = DEFAULT_VERSION;",
-		"const JAEGER_VERSION = "+mustJSON(map[string]string{"gitVersion": "ClickHouse Jaeger " + s.version, "gitCommit": "", "buildDate": ""})+";", 1)
+		"const JAEGER_VERSION = "+mustJSON(map[string]string{"gitVersion": "jaegershim " + s.version, "gitCommit": "", "buildDate": ""})+";", 1)
 	w.Header().Set("Content-Type", "text/html; charset=utf-8")
 	w.Header().Set("Cache-Control", "no-cache")
 	_, _ = w.Write([]byte(html))

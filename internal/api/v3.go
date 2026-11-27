@@ -5,7 +5,7 @@ import (
 	"strconv"
 	"strings"
 
-	"github.com/nochaosio/clickhouse-jaeger/internal/chstore"
+	"github.com/nochaosio/jaegershim-clickhouse/internal/chstore"
 )
 
 // Modelo da API v3 do Jaeger (OTLP/JSON), consumido pelo Jaeger UI 2.x.

@@ -1,0 +1,23 @@
+name: Bug report
+description: Something is broken or differs from real Jaeger
+labels: [bug]
+body:
+  - type: textarea
+    id: what
+    attributes:
+      label: What happened
+      description: Request sent, response received, and what you expected (or what real Jaeger returns).
+    validations:
+      required: true
+  - type: textarea
+    id: repro
+    attributes:
+      label: How to reproduce
+      placeholder: curl 'http://localhost:16686/api/traces?service=...'
+  - type: input
+    id: versions
+    attributes:
+      label: Versions
+      placeholder: jaegershim 0.1.0, ClickHouse 26.10, otelcol-contrib 0.165, Grafana 13.2 / Jaeger UI 2.23
+    validations:
+      required: true

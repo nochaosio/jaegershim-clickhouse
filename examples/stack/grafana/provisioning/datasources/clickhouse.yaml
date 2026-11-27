@@ -40,11 +40,11 @@ datasources:
     secureJsonData:
       basicAuthPassword: ${CLICKHOUSE_PASSWORD}
 
-  - name: ClickHouse Jaeger
-    uid: clickhouse-jaeger
+  - name: jaegershim
+    uid: jaegershim
     type: jaeger
     access: proxy
-    url: http://clickhouse-jaeger:16686
+    url: http://jaegershim:16686
     editable: true
     jsonData:
       tracesToLogsV2:

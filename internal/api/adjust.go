@@ -4,7 +4,7 @@ import (
 	"fmt"
 	"time"
 
-	"github.com/nochaosio/clickhouse-jaeger/internal/chstore"
+	"github.com/nochaosio/jaegershim-clickhouse/internal/chstore"
 )
 
 // Reproduz os "adjusters" que o Jaeger Query aplica antes de devolver um trace

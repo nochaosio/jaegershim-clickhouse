@@ -4,7 +4,7 @@ import (
 	"sort"
 	"strings"
 
-	"github.com/nochaosio/clickhouse-jaeger/internal/chstore"
+	"github.com/nochaosio/jaegershim-clickhouse/internal/chstore"
 )
 
 // Modelo JSON da API legacy do Jaeger (/api/*), consumido pelo datasource Jaeger do Grafana.

@@ -1,4 +1,4 @@
-# Referências Jaeger para o de-para do ClickHouse Jaeger (clickhouse-jaeger)
+# Referências Jaeger para o de-para do jaegershim (jaegershim)
 # Uso (em examples/stack): docker compose -f docker-compose.yml -f compat/docker-compose.jaeger-test.yml up -d
 services:
   otel-collector:

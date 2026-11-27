@@ -5,7 +5,7 @@ The OTel Collector exports **the same traces** to three backends at once:
 
 | Backend | Role |
 |---|---|
-| ClickHouse (`otel_traces`) + **ClickHouse Jaeger** | system under test |
+| ClickHouse (`otel_traces`) + **jaegershim** | system under test |
 | Jaeger **2.20** (in-memory) | reference for the **legacy** `/api/*` API (the one Grafana uses; removed in Jaeger 2.22) |
 | Jaeger **2.23** (in-memory) | reference for the **v3** `/api/v3/*` API (the one Jaeger UI 2.x uses) |
 
@@ -14,7 +14,7 @@ Each scenario is executed against both sides and the full responses are normaliz
 summaries, dependencies, HTTP status codes and error messages). Search results are also checked against
 an independent answer key computed from the generator, so both sides cannot be wrong together.
 Grafana is exercised through its own `/api/ds/query` endpoint with two built-in Jaeger datasources:
-"Jaeger (original 2.20)" and "ClickHouse Jaeger".
+"Jaeger (original 2.20)" and "jaegershim".
 
 Attribute values are compared by their canonical string (OTel `AsString()`); differences **only in type**
 are counted separately (see *Known differences*).
@@ -37,7 +37,7 @@ trace ID with zero high bits; unicode service/operation names; empty span name; 
 
 ## Jaeger behaviours reproduced (found by the suites)
 
-| Behaviour | Jaeger | ClickHouse Jaeger |
+| Behaviour | Jaeger | jaegershim |
 |---|---|---|
 | Searchable synthetic tags | only `error`, `span.kind` | same (others behind `EXTENDED_TAG_SEARCH`) |
 | Empty span name | `empty-span-name` | same |
@@ -54,6 +54,6 @@ trace ID with zero high bits; unicode service/operation names; empty span name; 
 - **Attribute types**: Jaeger keeps `int64`/`float64`/`bool`/`binary`/arrays; ClickHouse stores
   `Map(String,String)`, so everything is a string. 1,806 attributes in the suites differ **only in type**.
 - **Jaeger 2.20 bug**: the "parent span not in trace" warning accumulates on every request (the adjuster
-  mutates the in-memory trace). Jaeger 2.23 and ClickHouse Jaeger return it once; the suites compare
+  mutates the in-memory trace). Jaeger 2.23 and jaegershim return it once; the suites compare
   warnings without duplicates.
 - Latency is not comparable with the in-memory reference (~1 ms vs ~10 ms).

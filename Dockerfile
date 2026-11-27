@@ -9,7 +9,7 @@ COPY internal ./internal
 ARG TARGETOS TARGETARCH VERSION=dev
 RUN go vet ./... && go test ./... && \
     CGO_ENABLED=0 GOOS=$TARGETOS GOARCH=$TARGETARCH \
-    go build -trimpath -ldflags="-s -w -X main.version=${VERSION}" -o /out/clickhouse-jaeger .
+    go build -trimpath -ldflags="-s -w -X main.version=${VERSION}" -o /out/jaegershim .
 
 # ---- Jaeger UI (assets oficiais, Apache-2.0) ----
 FROM --platform=$BUILDPLATFORM alpine:3.22 AS ui
@@ -20,12 +20,12 @@ RUN apk add --no-cache curl tar && mkdir -p /ui && \
 
 # ---- runtime ----
 FROM gcr.io/distroless/static-debian12:nonroot
-LABEL org.opencontainers.image.source="https://github.com/nochaosio/clickhouse-jaeger" \
+LABEL org.opencontainers.image.source="https://github.com/nochaosio/jaegershim-clickhouse" \
       org.opencontainers.image.description="Jaeger Query API (legacy + v3) and Jaeger UI over OpenTelemetry traces stored in ClickHouse" \
       org.opencontainers.image.licenses="Apache-2.0"
-COPY --from=build /out/clickhouse-jaeger /clickhouse-jaeger
+COPY --from=build /out/jaegershim /jaegershim
 COPY --from=ui /ui /ui
 ENV UI_DIR=/ui LISTEN_ADDR=:16686
 EXPOSE 16686
 USER nonroot
-ENTRYPOINT ["/clickhouse-jaeger"]
+ENTRYPOINT ["/jaegershim"]

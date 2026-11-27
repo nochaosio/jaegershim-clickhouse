@@ -1,4 +1,4 @@
-module github.com/nochaosio/clickhouse-jaeger
+module github.com/nochaosio/jaegershim-clickhouse
 
 go 1.27.4
 

@@ -1,4 +1,4 @@
-name: clickhouse-jaeger-example
+name: jaegershim-example
 
 services:
   clickhouse:
@@ -150,10 +150,10 @@ services:
       clickhouse: { condition: service_healthy }
     restart: unless-stopped
 
-  clickhouse-jaeger:
+  jaegershim:
     build: ../..
-    image: ghcr.io/nochaosio/clickhouse-jaeger:${CLICKHOUSE_JAEGER_VERSION:-dev}
-    container_name: clickhouse-jaeger
+    image: ghcr.io/nochaosio/jaegershim-clickhouse:${JAEGERSHIM_VERSION:-dev}
+    container_name: jaegershim
     environment:
       CLICKHOUSE_ADDR: clickhouse:9000
       CLICKHOUSE_USER: ${JAEGER_CH_USER}
@@ -162,7 +162,7 @@ services:
       TRACES_TABLE: otel_traces
       SERVICES_LOOKBACK: 168h
     ports:
-      - "16686:16686"   # ClickHouse Jaeger: Jaeger UI + API (legacy /api e v3 /api/v3) sobre o ClickHouse
+      - "16686:16686"   # jaegershim: Jaeger UI + API (legacy /api e v3 /api/v3) sobre o ClickHouse
     depends_on:
       clickhouse: { condition: service_healthy }
     restart: unless-stopped

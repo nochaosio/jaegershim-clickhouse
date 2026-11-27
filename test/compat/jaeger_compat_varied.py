@@ -1,10 +1,10 @@
 #!/usr/bin/env python3
-"""De-para com tipos de span/trace variados: Jaeger original x ClickHouse Jaeger.
+"""De-para com tipos de span/trace variados: Jaeger original x jaegershim.
 
 Usa test/compat/gen_traces_varied.py (24 casos de borda) e compara, por caso:
-  - trace por ID na API legacy (Jaeger 2.20 x ClickHouse Jaeger)
-  - trace por ID via Grafana (plugin Jaeger: "Jaeger (original 2.20)" x "ClickHouse Jaeger")
-  - trace por ID na API v3/OTLP (Jaeger 2.23 x ClickHouse Jaeger)
+  - trace por ID na API legacy (Jaeger 2.20 x jaegershim)
+  - trace por ID via Grafana (plugin Jaeger: "Jaeger (original 2.20)" x "jaegershim")
+  - trace por ID na API v3/OTLP (Jaeger 2.23 x jaegershim)
   - busca por caso (legacy, v3 trace-summaries, Grafana)
 e buscas por recurso específico (kinds, tipos de atributo, eventos, colisão, unicode, durações...).
 

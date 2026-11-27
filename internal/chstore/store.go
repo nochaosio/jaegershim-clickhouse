@@ -113,7 +113,7 @@ func New(ctx context.Context, cfg Config) (*Store, error) {
 		ConnMaxLifetime: time.Hour,
 		// Sem Settings no cliente: o usuário recomendado é readonly=1 com limites
 		// definidos no servidor (SETTINGS PROFILE ... CONST). O timeout é aplicado via context.
-		ClientInfo: clickhouse.ClientInfo{Products: []struct{ Name, Version string }{{Name: "clickhouse-jaeger", Version: "0.1.0"}}},
+		ClientInfo: clickhouse.ClientInfo{Products: []struct{ Name, Version string }{{Name: "jaegershim", Version: "0.1.0"}}},
 	})
 	if err != nil {
 		return nil, err

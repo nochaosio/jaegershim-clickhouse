@@ -1,4 +1,4 @@
-// clickhouse-jaeger: implementa a API do Jaeger Query (legacy e v3) lendo
+// jaegershim: implementa a API do Jaeger Query (legacy e v3) lendo
 // traces OpenTelemetry direto do ClickHouse (schema do exporter `clickhouse` do
 // OpenTelemetry Collector). Permite usar o Jaeger UI e o datasource Jaeger do
 // Grafana sobre dados que já estão no ClickHouse, sem duplicar o armazenamento.
@@ -15,8 +15,8 @@ import (
 	"syscall"
 	"time"
 
-	"github.com/nochaosio/clickhouse-jaeger/internal/api"
-	"github.com/nochaosio/clickhouse-jaeger/internal/chstore"
+	"github.com/nochaosio/jaegershim-clickhouse/internal/api"
+	"github.com/nochaosio/jaegershim-clickhouse/internal/chstore"
 )
 
 var version = "0.1.0"
@@ -95,7 +95,7 @@ func main() {
 		defer cancel()
 		_ = srv.Shutdown(sctx)
 	}()
-	log.Info("clickhouse-jaeger started", "listen", listen, "clickhouse", cfg.Addr,
+	log.Info("jaegershim started", "listen", listen, "clickhouse", cfg.Addr,
 		"table", cfg.Database+"."+cfg.TracesTable, "ui", os.Getenv("UI_DIR") != "", "version", version)
 	if err := srv.ListenAndServe(); err != nil && !errors.Is(err, http.ErrServerClosed) {
 		log.Error("server error", "err", err)
