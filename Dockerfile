@@ -12,7 +12,7 @@ RUN go vet ./... && go test ./... && \
     go build -trimpath -ldflags="-s -w -X main.version=${VERSION}" -o /out/jaegershim .
 
 # ---- Jaeger UI (assets oficiais, Apache-2.0) ----
-FROM --platform=$BUILDPLATFORM alpine:3.22 AS ui
+FROM --platform=$BUILDPLATFORM alpine:3.24 AS ui
 ARG JAEGER_UI_VERSION=v2.23.0
 RUN apk add --no-cache curl tar && mkdir -p /ui && \
     curl -fsSL -o /tmp/assets.tar.gz https://github.com/jaegertracing/jaeger-ui/releases/download/${JAEGER_UI_VERSION}/assets.tar.gz && \
